@@ -1,0 +1,38 @@
+{
+  "experiment_id": "FRONT_DET_YOLOV8N_001",
+  "dataset": "data/roboflow/front_detect_v1",
+  "dataset_version": 1,
+  "model": "yolov8n.pt",
+  "epochs": 100,
+  "batch": 16,
+  "best_epoch": 74,
+  "precision": 0.96682,
+  "recall": 0.9663,
+  "mAP50": 0.98976,
+  "mAP50_95": 0.55233,
+  "training_runtime_sec": 1334.623,
+  "best_model": "runs/front/yolov8n_front_v1_baseline/weights/best.pt",
+  "best_model_sha256": "750b0f8a1621f7214c8122467e5360ada69673ae4a8dc5bf3fd7b1e280287738",
+  "dataset_manifest": "results/detection/front_dataset_manifest.json",
+  "dataset_source": {
+    "source": "roboflow",
+    "workspace": "phys-hus",
+    "project": "fish_front_detection",
+    "version": 1,
+    "format": "yolov8",
+    "local_root": "data/roboflow/front_detect_v1"
+  },
+  "git_commit": "b3b6d2fadcdd5e38f434cc2041eac51ba773943e",
+  "checkpoint_result": "PASS_WITH_WARNING",
+  "warnings": [
+    "WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 41, len(boxes) = 3888. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset.",
+    "WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 10, len(boxes) = 995. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset."
+  ],
+  "output_files": [
+    "logs/detection/FRONT_DET_YOLOV8N_001/config.yaml",
+    "logs/detection/FRONT_DET_YOLOV8N_001/environment.txt",
+    "logs/detection/FRONT_DET_YOLOV8N_001/summary.json",
+    "results/detection/front_yolov8n_baseline_metrics.csv"
+  ],
+  "next_step": "USER reviews and accepts Notebook 03 results before any Notebook 04 work."
+}

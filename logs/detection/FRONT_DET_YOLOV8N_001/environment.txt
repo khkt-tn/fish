@@ -1,0 +1,11 @@
+experiment_id=FRONT_DET_YOLOV8N_001
+datetime_utc=2026-08-17T05:23:19.483512+00:00
+git_commit=b3b6d2fadcdd5e38f434cc2041eac51ba773943e
+python_executable=/home/diy-hus/miniconda3/envs/fish/bin/python
+python=3.11.15
+conda_env=fish
+torch=2.13.0+cu130
+cuda_runtime=13.0
+cuda_available=True
+gpu=NVIDIA GeForce RTX 3050
+ultralytics=8.4.120

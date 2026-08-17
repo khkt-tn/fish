@@ -1,0 +1,17 @@
+experiment_id: FRONT_DET_YOLOV8N_001
+model: yolov8n.pt
+data: data/roboflow/front_detect_v1/data.yaml
+imgsz: 640
+epochs: 100
+batch: 16
+device: 0
+seed: 42
+workers: 4
+optimizer: auto
+project: runs/front
+name: yolov8n_front_v1_baseline
+dataset_source: roboflow
+workspace: phys-hus
+project_id: fish_front_detection
+dataset_version: 1
+git_commit: b3b6d2fadcdd5e38f434cc2041eac51ba773943e
