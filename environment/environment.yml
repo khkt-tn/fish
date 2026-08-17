@@ -1,0 +1,6 @@
+name: fish
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+prefix: /home/diy-hus/miniconda3/envs/fish

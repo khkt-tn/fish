@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Conda / environment
+.conda/
+.venv/
+venv/
+
+# Raw / downloaded data
+data/raw/
+data/roboflow/
+data/processed/
+data/eval/
+
+# Models / training outputs
+models/
+runs/
+weights/
+*.pt
+*.onnx
+*.engine
+*.tflite
+
+# Video / large media
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Local artifacts
+outputs/
+artifacts_local/
+
+# Temporary files
+*.tmp
+*.cache
+*.log.tmp
+
+# Secrets
+.env
+*.key
+credentials*.json
+token*.json
