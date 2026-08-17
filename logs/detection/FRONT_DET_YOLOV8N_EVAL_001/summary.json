@@ -1,0 +1,71 @@
+{
+  "experiment_id": "FRONT_DET_YOLOV8N_EVAL_001",
+  "model": "runs/front/yolov8n_front_v1_baseline/weights/best.pt",
+  "model_sha256": "750b0f8a1621f7214c8122467e5360ada69673ae4a8dc5bf3fd7b1e280287738",
+  "dataset": "data/roboflow/front_detect_v1",
+  "dataset_version": 1,
+  "evaluation_split": "valid",
+  "validation_images": 254,
+  "validation_objects": 995,
+  "precision": 0.9677949492608868,
+  "recall": 0.9664655247601828,
+  "mAP50": 0.9898324652250613,
+  "mAP50_95": 0.5525137653149601,
+  "difference_vs_training": [
+    {
+      "metric": "precision",
+      "training_validation": 0.96682,
+      "reloaded_best_model_validation": 0.9677949492608868,
+      "absolute_difference": 0.0009749492608868149
+    },
+    {
+      "metric": "recall",
+      "training_validation": 0.9663,
+      "reloaded_best_model_validation": 0.9664655247601828,
+      "absolute_difference": 0.00016552476018272255
+    },
+    {
+      "metric": "mAP50",
+      "training_validation": 0.98976,
+      "reloaded_best_model_validation": 0.9898324652250613,
+      "absolute_difference": 7.246522506132447e-05
+    },
+    {
+      "metric": "mAP50_95",
+      "training_validation": 0.55233,
+      "reloaded_best_model_validation": 0.5525137653149601,
+      "absolute_difference": 0.00018376531496011594
+    }
+  ],
+  "count_MAE": 0.32677165354330706,
+  "count_RMSE": 0.7397594842164505,
+  "count_bias": 0.2952755905511811,
+  "exact_count_rate": 0.7598425196850394,
+  "undercount_rate": 0.015748031496062992,
+  "overcount_rate": 0.22440944881889763,
+  "model_parameters": 3011043,
+  "model_GFLOPs": 8.1916928,
+  "model_size_MB": 5.953653335571289,
+  "imgsz": 640,
+  "preprocess_ms": 1.0796512086403889,
+  "inference_ms": 4.00421039369497,
+  "postprocess_ms": 1.3198084803217909,
+  "inference_fps": 249.73712709367126,
+  "validation_runtime_sec": 7.949,
+  "checkpoint_result": "PASS_WITH_WARNING",
+  "warnings": [
+    "WARNING ⚠️ Box and segment counts should be equal, but got len(segments) = 10, len(boxes) = 995. To resolve this only boxes will be used and all segments will be removed. To avoid this please supply either a detect or segment dataset, not a detect-segment mixed dataset.",
+    "Optional test split is absent; all reported model metrics are VALIDATION METRICS."
+  ],
+  "output_files": [
+    "logs/detection/FRONT_DET_YOLOV8N_EVAL_001/config.yaml",
+    "logs/detection/FRONT_DET_YOLOV8N_EVAL_001/environment.txt",
+    "logs/detection/FRONT_DET_YOLOV8N_EVAL_001/summary.json",
+    "results/detection/front_yolov8n_validation_metrics.csv",
+    "results/detection/front_yolov8n_reproducibility_check.csv",
+    "results/detection/front_yolov8n_count_diagnostics.csv"
+  ],
+  "local_plot_directory": "outputs/front/detection/evaluation",
+  "git_commit": "7e23b580488fe650fb3b379ca97f686d5b8ce9af",
+  "next_step": "USER reviews and accepts Notebook 04 results before any Notebook 05 work."
+}
