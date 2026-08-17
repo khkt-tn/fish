@@ -1,0 +1,32 @@
+{
+  "experiment_id": "FRONT_VIDEO4_TRAJECTORY_1S_001",
+  "video": "data/raw/front/4.mp4",
+  "video_sha256": "3f8587344beba8dcc6f835d1ed94aa8daadb06a369b5b96977ee902f035b5700",
+  "model": "runs/front/yolov8n_front_v1_baseline/weights/best.pt",
+  "model_sha256": "750b0f8a1621f7214c8122467e5360ada69673ae4a8dc5bf3fd7b1e280287738",
+  "tracker": "configs/trackers/front_bytetrack_b15.yaml",
+  "trajectory_window_sec": 1.0,
+  "window_frames": 29,
+  "frames": 3431,
+  "fps": 28.66843196767745,
+  "duration_sec": 119.67867666666668,
+  "tracked_frames": 2380,
+  "untracked_frames": 1051,
+  "tracked_rate": 0.6936753133197319,
+  "processing_FPS": 48.83566947572755,
+  "checkpoint_result": "PASS_WITH_WARNING",
+  "context_note": "Trajectory disappearance during shelter entry or egg-care periods may reflect true temporary non-visibility; no behavior/event label is inferred.",
+  "warnings": [
+    "Some frames have no active observed track. During shelter or egg-care periods this may reflect true temporary non-visibility, not necessarily tracker failure."
+  ],
+  "output_files": [
+    "outputs/front/trajectory/video4/video4_tracking_overlay_1s.mp4",
+    "outputs/front/trajectory/video4/video4_tracking_framewise.csv",
+    "results/tracking/front_video4_trajectory_summary.csv",
+    "logs/tracking/FRONT_VIDEO4_TRAJECTORY_1S_001/config.yaml",
+    "logs/tracking/FRONT_VIDEO4_TRAJECTORY_1S_001/environment.txt",
+    "logs/tracking/FRONT_VIDEO4_TRAJECTORY_1S_001/summary.json"
+  ],
+  "git_commit": "de56549b8f773395b1c3fdf0d7841e6559945030",
+  "next_step": "USER reviews the Video 4 trajectory overlay; do not start Notebook 08 without explicit approval."
+}
