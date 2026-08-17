@@ -28,7 +28,7 @@ Default order:
 
 After completing one notebook or experimental step:
 
-1. run it;
+1. for Notebook 01 onward, prepare it and stop for the user to run it manually in VS Code as required by Section 8; Notebook 00 is the completed historical exception;
 2. verify outputs;
 3. save logs;
 4. save summary/results;
@@ -254,6 +254,119 @@ For large outputs:
 - save full data locally;
 - keep only summaries in notebook;
 - copy small summary files to `results/`.
+
+### 8.1. Notebook execution ownership
+
+From Notebook 01 onward, every notebook must be executed directly by the user with **Run** or **Run All** in VS Code.
+
+Codex must not automatically execute notebooks.
+
+Codex must not use:
+- `jupyter nbconvert --execute`;
+- `jupyter execute`;
+- Papermill;
+- nbclient to execute a notebook;
+- a Python script to automatically run an entire notebook;
+- a terminal or background process to run a notebook for the user.
+
+Codex may only:
+1. create a notebook;
+2. edit a notebook;
+3. perform static code inspection;
+4. check syntax when possible without running an experiment;
+5. prepare the CONFIG section;
+6. explain which cells the user must run;
+7. identify expected inputs and outputs;
+8. stop so the user can open the notebook in VS Code and select **Run** or **Run All**.
+
+After preparing a notebook, Codex must report exactly:
+
+> Notebook đã sẵn sàng để chạy thủ công trong VS Code.
+> Hãy mở `<notebook path>`, chọn kernel fish và bấm Run All.
+> Sau khi chạy xong, Save notebook và báo tôi để kiểm tra kết quả.
+
+### 8.2. Notebook logging requirements
+
+Because the user directly observes notebook execution, every notebook must display clear logs in cell outputs.
+
+Every notebook must include:
+
+1. An initial cell that displays:
+   - experiment ID;
+   - datetime;
+   - `PROJECT_ROOT`;
+   - Python executable;
+   - Conda environment;
+   - device;
+   - GPU, if available.
+2. A CONFIG cell that prints all important configuration before the experiment starts.
+3. Progress logs for long-running steps. For video processing, include:
+   - total frame count;
+   - source FPS;
+   - resolution;
+   - progress every 100 or 200 frames;
+   - elapsed time;
+   - processing FPS.
+   Do not emit excessive per-frame logs.
+4. When creating a file, print:
+   - output path;
+   - number of records or frames;
+   - file size when useful.
+5. A final cell that displays:
+   - `PASS`, `PASS_WITH_WARNING`, or `FAIL`;
+   - runtime;
+   - main metrics;
+   - output files;
+   - warnings;
+   - next step.
+6. Unhidden tracebacks. If a cell fails, its error must remain directly visible in the notebook so the user can inspect it.
+
+### 8.3. User run gate
+
+The mandatory workflow for every notebook from Notebook 01 onward is:
+
+**Codex:**
+- prepare the notebook;
+- perform static checks only;
+- report that the notebook is ready;
+- stop.
+
+**User:**
+- open the notebook in VS Code;
+- verify that the kernel is `fish`;
+- select **Run All**;
+- observe the logs;
+- save the notebook;
+- send the result to Codex.
+
+**Codex:**
+- read the saved results;
+- analyze metrics and logs;
+- edit the notebook if necessary;
+- stop again so the user can rerun it manually.
+
+Codex may prepare the next notebook only after the user explicitly confirms that the current notebook passed.
+
+### 8.4. Authentication in notebooks
+
+All existing authentication and login rules remain in force.
+
+If a notebook requires Google Drive authentication, rclone OAuth, Roboflow API authentication, GitHub login, a token, or a credential, Codex must stop before that step and the user must perform authentication manually.
+
+Avoid putting authentication in notebook cells whenever possible.
+
+Research notebooks must never contain:
+- passwords;
+- API keys;
+- access tokens;
+- OAuth tokens;
+- credentials.
+
+### 8.5. Notebook 00 exception
+
+Notebook 00 was completed and executed before the notebook execution ownership rule was introduced. Do not change the Checkpoint 00 result.
+
+Mandatory user-manual execution applies from Notebook 01 onward.
 
 ---
 
