@@ -1,0 +1,131 @@
+{
+  "experiment_id": "FRONT_TRACKER_BENCHMARK_001",
+  "model_sha256": "750b0f8a1621f7214c8122467e5360ada69673ae4a8dc5bf3fd7b1e280287738",
+  "video_sha256": "3f8587344beba8dcc6f835d1ed94aa8daadb06a369b5b96977ee902f035b5700",
+  "visibility_groundtruth": "loaded",
+  "trackers": {
+    "BYTE_B15": {
+      "tracker": "BYTE_B15",
+      "visible_frames": 2335,
+      "visible_tracked_frames": 2333,
+      "visible_untracked_frames": 2,
+      "visible_track_coverage": 0.9991434689507495,
+      "visible_zero_track_rate": 0.0008565310492505353,
+      "visible_one_track_rate": 0.9991434689507495,
+      "visible_multi_track_rate": 0.0,
+      "visible_interval_count": 18,
+      "visible_track_segments_total": 19,
+      "visible_excess_fragments": 1,
+      "visible_id_transitions": 0,
+      "longest_visible_untracked_run_frames": 1,
+      "longest_visible_untracked_run_sec": 0.03488157291363062,
+      "median_visible_untracked_run_frames": 1.0,
+      "p95_visible_untracked_run_frames": 1.0,
+      "tracks_observed_during_shelter": 6,
+      "unique_track_ids_total": 2,
+      "median_track_lifespan_sec": 41.50907176722045,
+      "mean_track_lifespan_sec": 41.50907176722045,
+      "max_track_lifespan_sec": 49.14813623530555,
+      "processing_FPS": 48.77654058298213
+    },
+    "BOTSORT": {
+      "tracker": "BOTSORT",
+      "visible_frames": 2335,
+      "visible_tracked_frames": 2333,
+      "visible_untracked_frames": 2,
+      "visible_track_coverage": 0.9991434689507495,
+      "visible_zero_track_rate": 0.0008565310492505353,
+      "visible_one_track_rate": 0.9991434689507495,
+      "visible_multi_track_rate": 0.0,
+      "visible_interval_count": 18,
+      "visible_track_segments_total": 19,
+      "visible_excess_fragments": 1,
+      "visible_id_transitions": 0,
+      "longest_visible_untracked_run_frames": 1,
+      "longest_visible_untracked_run_sec": 0.03488157291363062,
+      "median_visible_untracked_run_frames": 1.0,
+      "p95_visible_untracked_run_frames": 1.0,
+      "tracks_observed_during_shelter": 6,
+      "unique_track_ids_total": 2,
+      "median_track_lifespan_sec": 41.50907176722045,
+      "mean_track_lifespan_sec": 41.50907176722045,
+      "max_track_lifespan_sec": 49.14813623530555,
+      "processing_FPS": 31.531343907695245
+    }
+  },
+  "requested_tracker_configs": {
+    "BYTE_B15": {
+      "tracker_type": "bytetrack",
+      "track_high_thresh": 0.68,
+      "track_low_thresh": 0.5,
+      "new_track_thresh": 0.68,
+      "track_buffer": 15,
+      "match_thresh": 0.8,
+      "fuse_score": true
+    },
+    "BOTSORT": {
+      "tracker_type": "botsort",
+      "track_high_thresh": 0.68,
+      "track_low_thresh": 0.5,
+      "new_track_thresh": 0.68,
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "fuse_score": true,
+      "gmc_method": "sparseOptFlow",
+      "proximity_thresh": 0.5,
+      "appearance_thresh": 0.8,
+      "with_reid": false,
+      "model": "auto"
+    }
+  },
+  "actual_tracker_configs": {
+    "BYTE_B15": {
+      "tracker_type": "bytetrack",
+      "track_high_thresh": 0.68,
+      "track_low_thresh": 0.5,
+      "new_track_thresh": 0.68,
+      "track_buffer": 15,
+      "match_thresh": 0.8,
+      "fuse_score": true
+    },
+    "BOTSORT": {
+      "tracker_type": "botsort",
+      "track_high_thresh": 0.68,
+      "track_low_thresh": 0.5,
+      "new_track_thresh": 0.68,
+      "track_buffer": 30,
+      "match_thresh": 0.8,
+      "fuse_score": true,
+      "gmc_method": "sparseOptFlow",
+      "proximity_thresh": 0.5,
+      "appearance_thresh": 0.8,
+      "with_reid": false,
+      "model": "auto"
+    }
+  },
+  "best_candidate": "BYTE_B15",
+  "selection_reason": "Provisional ranking prioritizes visibility-aware quality; if quality is equivalent, the simpler/lighter tracker is preferred for Raspberry Pi deployment. USER decides the final tracker.",
+  "scientific_limitation": "One-fish video does not fully evaluate multi-fish identity association, crossing-induced ID switches, or inter-fish occlusion.",
+  "checkpoint_result": "PASS_WITH_WARNING",
+  "warnings": [
+    "This one-fish benchmark does not establish multi-fish MOT performance.",
+    "BYTE_B15 has imperfect diagnostic values; inspect its metrics and overlay.",
+    "BOTSORT has imperfect diagnostic values; inspect its metrics and overlay."
+  ],
+  "output_files": [
+    "results/tracking/front_tracker_benchmark.csv",
+    "logs/tracking/FRONT_TRACKER_BENCHMARK_001/config.yaml",
+    "logs/tracking/FRONT_TRACKER_BENCHMARK_001/environment.txt",
+    "logs/tracking/FRONT_TRACKER_BENCHMARK_001/summary.json",
+    "outputs/front/tracking/benchmark/BYTE_B15/frame_tracks.csv",
+    "outputs/front/tracking/benchmark/BYTE_B15/overlay.mp4",
+    "outputs/front/tracking/benchmark/BYTE_B15/visible_interval_diagnostics.csv",
+    "outputs/front/tracking/benchmark/BYTE_B15/track_lifespans.csv",
+    "outputs/front/tracking/benchmark/BOTSORT/frame_tracks.csv",
+    "outputs/front/tracking/benchmark/BOTSORT/overlay.mp4",
+    "outputs/front/tracking/benchmark/BOTSORT/visible_interval_diagnostics.csv",
+    "outputs/front/tracking/benchmark/BOTSORT/track_lifespans.csv"
+  ],
+  "git_commit": "78ed4c11909367c4eef4724991449f74994d917f",
+  "next_step": "USER reviews tracker benchmark before any Notebook 09 work."
+}

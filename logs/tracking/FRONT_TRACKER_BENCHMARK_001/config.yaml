@@ -1,0 +1,71 @@
+experiment_id: FRONT_TRACKER_BENCHMARK_001
+video: data/raw/front/4.mp4
+model: runs/front/yolov8n_front_v1_baseline/weights/best.pt
+visibility_groundtruth: results/detection/front_visibility_frame_labels.csv
+detector_floor: 0.5
+high_confidence_threshold: 0.68
+nms_iou: 0.7
+imgsz: 640
+device: 0
+expected_fish_count: 1
+trackers:
+  BYTE_B15: configs/trackers/front_bytetrack_b15.yaml
+  BOTSORT: configs/trackers/front_botsort_benchmark.yaml
+output_root: outputs/front/tracking/benchmark
+result_path: results/tracking/front_tracker_benchmark.csv
+model_sha256: 750b0f8a1621f7214c8122467e5360ada69673ae4a8dc5bf3fd7b1e280287738
+video_sha256: 3f8587344beba8dcc6f835d1ed94aa8daadb06a369b5b96977ee902f035b5700
+video_fps: 28.66843196767745
+total_frames: 3431
+visibility_groundtruth_sha256: fad6b3f012a2bc33a4d5b2d043c5910c3d7c30a15d71d5a09b46fe7a934088ab
+ultralytics_version: 8.4.120
+requested_tracker_configs:
+  BYTE_B15:
+    tracker_type: bytetrack
+    track_high_thresh: 0.68
+    track_low_thresh: 0.5
+    new_track_thresh: 0.68
+    track_buffer: 15
+    match_thresh: 0.8
+    fuse_score: true
+  BOTSORT:
+    tracker_type: botsort
+    track_high_thresh: 0.68
+    track_low_thresh: 0.5
+    new_track_thresh: 0.68
+    track_buffer: 30
+    match_thresh: 0.8
+    fuse_score: true
+    gmc_method: sparseOptFlow
+    proximity_thresh: 0.5
+    appearance_thresh: 0.8
+    with_reid: false
+    model: auto
+actual_tracker_configs:
+  BYTE_B15:
+    tracker_type: bytetrack
+    track_high_thresh: 0.68
+    track_low_thresh: 0.5
+    new_track_thresh: 0.68
+    track_buffer: 15
+    match_thresh: 0.8
+    fuse_score: true
+  BOTSORT:
+    tracker_type: botsort
+    track_high_thresh: 0.68
+    track_low_thresh: 0.5
+    new_track_thresh: 0.68
+    track_buffer: 30
+    match_thresh: 0.8
+    fuse_score: true
+    gmc_method: sparseOptFlow
+    proximity_thresh: 0.5
+    appearance_thresh: 0.8
+    with_reid: false
+    model: auto
+other_official_configs_not_benchmarked:
+- deepocsort.yaml
+- fasttrack.yaml
+- ocsort.yaml
+- tracktrack.yaml
+git_commit: 78ed4c11909367c4eef4724991449f74994d917f
