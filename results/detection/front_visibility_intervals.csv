@@ -1,0 +1,10 @@
+start_frame,end_frame,start_time_sec,end_time_sec,visibility_state,review_note
+0,417,,,VISIBLE,fish visible
+418,424,,,PARTIALLY_VISIBLE,partially obscured
+425,912,,,VISIBLE,fish visible
+913,916,,,PARTIALLY_VISIBLE,near shelter
+917,970,,,VISIBLE,fish visible
+971,2020,,,IN_SHELTER,fish fully hidden inside shelter
+2021,2599,,,VISIBLE,fish visible
+2600,2616,,,PARTIALLY_VISIBLE,partially obscured
+2617,3430,,,VISIBLE,fish visible

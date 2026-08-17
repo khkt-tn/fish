@@ -1,0 +1,25 @@
+run_id,start_frame,end_frame,duration_frames,start_time_sec,end_time_sec,interval_visibility_state,contact_sheet_path,manual_visibility_label,manual_note
+1,381,382,2,13.289879280093267,13.324760853006898,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_001_frames_000381_000382.jpg,VISIBLE,
+2,387,388,2,13.499168717575051,13.534050290488683,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_002_frames_000387_000388.jpg,VISIBLE,
+3,401,401,1,13.98751073836588,13.98751073836588,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_003_frames_000401_000401.jpg,VISIBLE,
+4,410,410,1,14.301444894588556,14.301444894588556,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_004_frames_000410_000410.jpg,VISIBLE,
+5,412,413,2,14.371208040415818,14.406089613329447,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_005_frames_000412_000413.jpg,VISIBLE,
+6,415,415,1,14.475852759156709,14.475852759156709,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_006_frames_000415_000415.jpg,VISIBLE,
+7,788,788,1,27.48667945594093,27.48667945594093,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_007_frames_000788_000788.jpg,VISIBLE,
+8,918,919,2,32.02128393471291,32.056165507626545,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_008_frames_000918_000919.jpg,PARTIALLY_VISIBLE,entering shelter
+9,925,926,2,32.265454945108324,32.30033651802196,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_009_frames_000925_000926.jpg,PARTIALLY_VISIBLE,entering shelter
+10,2179,2179,1,76.00694737880113,76.00694737880113,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_010_frames_002179_002179.jpg,PARTIALLY_VISIBLE,entering shelter
+11,2189,2190,2,76.35576310793743,76.39064468085107,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_011_frames_002189_002190.jpg,PARTIALLY_VISIBLE,entering shelter
+12,2192,2193,2,76.46040782667832,76.49528939959195,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_012_frames_002192_002193.jpg,PARTIALLY_VISIBLE,entering shelter
+13,2196,2196,1,76.59993411833285,76.59993411833285,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_013_frames_002196_002196.jpg,PARTIALLY_VISIBLE,entering shelter
+14,2198,2198,1,76.6696972641601,76.6696972641601,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_014_frames_002198_002198.jpg,PARTIALLY_VISIBLE,entering shelter
+15,2215,2215,1,77.26268400369183,77.26268400369183,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_015_frames_002215_002215.jpg,PARTIALLY_VISIBLE,entering shelter
+16,2588,2588,1,90.27351070047605,90.27351070047605,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_016_frames_002588_002588.jpg,PARTIALLY_VISIBLE,entering shelter
+17,2590,2590,1,90.34327384630332,90.34327384630332,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_017_frames_002590_002590.jpg,PARTIALLY_VISIBLE,entering shelter
+18,2594,2594,1,90.48280013795784,90.48280013795784,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_018_frames_002594_002594.jpg,PARTIALLY_VISIBLE,entering shelter
+19,2597,2598,2,90.58744485669872,90.62232642961236,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_019_frames_002597_002598.jpg,PARTIALLY_VISIBLE,entering shelter
+20,2834,2834,1,98.85437763722919,98.85437763722919,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_020_frames_002834_002834.jpg,PARTIALLY_VISIBLE,entering shelter
+21,2855,2856,2,99.58689066841544,99.62177224132905,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_021_frames_002855_002856.jpg,VISIBLE,
+22,2889,2889,1,100.77286414747887,100.77286414747887,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_022_frames_002889_002889.jpg,VISIBLE,
+23,2906,2907,2,101.3658508870106,101.40073245992423,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_023_frames_002906_002907.jpg,VISIBLE,
+24,2950,2950,1,102.90064009521033,102.90064009521033,VISIBLE,outputs/front/detection/visibility_review/conf068_n1/short_zero_runs/run_024_frames_002950_002950.jpg,VISIBLE,
