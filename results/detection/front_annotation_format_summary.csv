@@ -1,0 +1,3 @@
+split,bbox_rows,polygon_rows,bbox_files,polygon_files,mixed_format_files
+train,3847,41,1006,9,0
+valid,985,10,251,3,0

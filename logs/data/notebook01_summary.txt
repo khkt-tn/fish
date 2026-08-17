@@ -1,0 +1,22 @@
+datetime: 2026-08-17T04:16:22.041468+00:00
+experiment_id: NOTEBOOK_01_DATA_SOURCE_INVENTORY
+project_root: /home/diy-hus/fish
+Python: /home/diy-hus/miniconda3/envs/fish/bin/python
+Conda env: fish
+device: cuda:0
+GPU: NVIDIA GeForce RTX 3050
+runtime_sec: 0.761
+total_files: 0
+total_size_bytes: 0
+raw_front_videos: 0
+raw_top_videos: 0
+sensor_files: 0
+roboflow_files: 0
+video_readable: 0
+video_unreadable: 0
+local_roboflow_dataset: MISSING
+missing_expected_sources: ['raw_archive.front_video', 'raw_archive.top_video', 'raw_archive.sensor_data', 'labeled_detection_dataset.front_detection_dataset', 'labeled_detection_dataset.top_detection_dataset']
+checkpoint_result: PASS_WITH_WARNING
+output_files: ['logs/data/raw_inventory.csv', 'logs/data/notebook01_summary.txt']
+warnings: ['No local raw video was found.', 'No local Roboflow YOLO dataset was detected.', "Missing expected sources: ['raw_archive.front_video', 'raw_archive.top_video', 'raw_archive.sensor_data', 'labeled_detection_dataset.front_detection_dataset', 'labeled_detection_dataset.top_detection_dataset']"]
+next_step: User reviews this inventory; Notebook 02 may be prepared only after explicit PASS confirmation.

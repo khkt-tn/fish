@@ -1,0 +1,3 @@
+split,n_images,n_label_files,n_missing_labels,n_orphan_labels,n_empty_labels,n_boxes,bbox_rows,polygon_rows,bbox_files,polygon_files,mixed_format_files
+train,1015,1015,0,0,0,3888,3847,41,1006,9,0
+valid,254,254,0,0,0,995,985,10,251,3,0

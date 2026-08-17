@@ -1,0 +1,28 @@
+schema_version: 1
+
+sources:
+  raw_archive:
+    source: google_drive
+    access: manual_download
+
+  labeled_detection_dataset:
+    front:
+      source: roboflow
+      workspace: phys-hus
+      project: fish_front_detection
+      version: 1
+      format: yolov8
+      local_root: data/roboflow/front_detect_v1
+
+    top:
+      source: roboflow
+      workspace: phys-hus
+      project: fish-top-detection
+      version: 2
+      format: yolov8
+      local_root: data/roboflow/top_detect_v2
+
+inventory:
+  checksum: sha256
+  output: logs/data/data_source_inventory.csv
+  report_missing_required_inputs: true

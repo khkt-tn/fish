@@ -1,0 +1,33 @@
+FINAL SUMMARY
+experiment_id: FRONT_DATASET_AUDIT_001
+workspace: phys-hus
+project: fish_front_detection
+version: 1
+format: yolov8
+dataset_root: data/roboflow/front_detect_v1
+train_images: 1015
+train_boxes: 3888
+valid_images: 254
+valid_boxes: 995
+test_images: 0
+test_boxes: 0
+classes: {0: 'Ca'}
+annotation_formats: ['bbox', 'polygon']
+bbox_rows: 4832
+polygon_rows: 51
+bbox_files: 1257
+polygon_files: 12
+mixed_format_files: 0
+missing_labels: 0
+orphan_labels: 0
+empty_labels: 0
+true_invalid_labels: 0
+boundary_warnings: 0
+boundary_warning_images: 0
+corrupt_images: 0
+cross_split_duplicates: 0
+runtime_sec: 5.698
+checkpoint_result: PASS_WITH_WARNING
+output_files: ['logs/detection/dataset_audit.log', 'results/detection/front_dataset_audit_summary.csv', 'results/detection/front_class_distribution.csv', 'results/detection/front_label_errors.csv', 'results/detection/front_boundary_warnings.csv', 'results/detection/front_annotation_format_summary.csv', 'results/detection/front_mixed_format_files.csv', 'results/detection/front_duplicate_files.csv', 'logs/data/roboflow_versions.csv', 'results/detection/front_dataset_manifest.json']
+warnings: ['Optional test split is absent.', 'Dataset contains separate bbox-only and polygon-only label files; original annotations are preserved.']
+next_step: USER reviews Notebook 02 results; do not begin training without explicit approval.

@@ -11,8 +11,8 @@ Môi trường làm việc dự kiến:
 - Anaconda / Conda
 - Conda environment: `fish`
 - GPU NVIDIA nếu có
-- Dữ liệu thô gốc: lưu trên Google Drive
-- Dataset đã gán nhãn: giữ trên Roboflow
+- Dữ liệu thô gốc: lưu trữ lâu dài trên Google Drive; user tự tải/copy thủ công vào local khi cần
+- Dataset detection đã gán nhãn: Roboflow là source-of-truth
 - GitHub: chỉ quản lý source code, notebook, cấu hình, log, bảng kết quả nhỏ và tài liệu
 - Dữ liệu/video/model/output nặng: **không commit lên GitHub**
 
@@ -49,13 +49,17 @@ Triển khai mô hình nhẹ trên Raspberry Pi
 ### A. Source of truth — KHÔNG phụ thuộc máy cá nhân
 
 **Google Drive**
+- archival source-of-truth cho dữ liệu thô gốc;
 - video thô;
 - dữ liệu cảm biến thô;
 - dữ liệu thu thập gốc;
 - video thí nghiệm;
 - các file lớn cần lưu lâu dài.
+- không tích hợp authentication hoặc download tự động vào pipeline chuẩn;
+- user tự tải/copy file cần thiết vào `data/raw/`.
 
 **Roboflow**
+- source-of-truth cho labeled detection datasets;
 - ảnh đã gán bounding box;
 - phiên bản dataset detection;
 - train / valid / test split;
@@ -76,9 +80,9 @@ artifacts_local/
 ```
 
 Các thư mục này:
-- được tải / sinh lại từ Drive, Roboflow hoặc notebook;
+- là working copy do user tải/copy thủ công từ Drive, lấy từ đúng Roboflow dataset version, hoặc do notebook sinh ra;
 - không phải nguồn lưu trữ duy nhất;
-- không commit Git;
+- được `.gitignore` và không commit Git;
 - có thể xóa sau khi dự án kết thúc để giải phóng bộ nhớ.
 
 ### C. Research evidence — PHẢI quản lý bằng Git
@@ -125,7 +129,7 @@ fish/
 │
 ├── notebooks/
 │   ├── 00_environment_check.ipynb
-│   ├── 01_data_inventory.ipynb
+│   ├── 01_data_source_inventory.ipynb
 │   ├── 02_dataset_detection_audit.ipynb
 │   ├── 03_yolo_detection_training.ipynb
 │   ├── 04_yolo_detection_evaluation.ipynb
@@ -153,7 +157,6 @@ fish/
 │   └── utils/
 │
 ├── scripts/
-│   ├── download_drive_data.sh
 │   ├── download_roboflow_data.sh
 │   ├── run_front_detection.py
 │   ├── run_front_tracking.py
@@ -161,6 +164,7 @@ fish/
 │
 ├── configs/
 │   ├── paths.yaml
+│   ├── data_sources.yaml
 │   ├── detection/
 │   ├── tracking/
 │   └── behavior/
@@ -397,11 +401,11 @@ Mục tiêu:
 
 ---
 
-# 6. Tải dữ liệu từ Google Drive
+# 6. Nguồn dữ liệu thô và inventory local
 
 ## Nguyên tắc
 
-Google Drive là nơi giữ:
+Google Drive là archival source-of-truth giữ:
 
 ```text
 raw video
@@ -430,48 +434,52 @@ data/raw/
 
 Không copy dữ liệu thô vào Git.
 
-## Khuyến nghị dùng `rclone`
+Khi cần raw video hoặc sensor data, user tự download/copy thủ công file cần thiết từ Google Drive vào `data/raw/`.
 
-Cài và cấu hình `rclone` trong WSL.
+Pipeline chuẩn:
+- không login Google Drive;
+- không yêu cầu Google Drive authentication;
+- không download tự động;
+- không phụ thuộc `rclone`.
 
-Sau khi kết nối Drive, ưu tiên:
+`rclone` chỉ là optional utility nếu sau này user chủ động muốn dùng. Việc cài đặt, OAuth và cấu hình `rclone` không thuộc workflow chuẩn và phải tuân thủ authentication stop gate.
 
-```bash
-rclone copy gdrive:<REMOTE_PATH> ./data/raw/ --progress
+## Notebook 01 — `01_data_source_inventory.ipynb`
+
+Notebook 01 không login, không download tự động và không chạy Roboflow API.
+
+Notebook đọc `configs/data_sources.yaml` và chỉ inventory các file đã có trong local working copy.
+
+Notebook phải:
+- validate cấu hình nguồn dữ liệu;
+- quét các đường dẫn local đã khai báo;
+- ghi relative path và kích thước file;
+- tính SHA-256 checksum;
+- với video, đọc duration, FPS, resolution và số frame khi có thể;
+- đối chiếu file hiện có với các input bắt buộc trong config;
+- báo rõ dữ liệu nào còn thiếu để Notebook 02 hoặc bước tiếp theo chạy được;
+- không lưu video hoặc dữ liệu lớn trong notebook.
+
+Input cấu hình:
+
+```text
+configs/data_sources.yaml
 ```
-
-thay vì mount nếu mục tiêu là chạy training / video processing local.
-
-Lý do:
-- xử lý video nhanh hơn;
-- tránh phụ thuộc mạng trong lúc train;
-- dễ xóa local sau dự án.
-
-## Notebook 01 — `01_data_inventory.ipynb`
-
-Không dùng notebook này để lưu video.
-
-Notebook chỉ:
-- quét danh sách file local;
-- kích thước file;
-- số video;
-- duration;
-- FPS;
-- resolution;
-- checksum nếu cần;
-- đối chiếu dataset source.
 
 Xuất:
 
 ```text
-logs/data/raw_inventory.csv
+logs/data/data_source_inventory.csv
 ```
 
 Các cột:
 
 ```text
 source
+source_of_truth
 relative_path
+exists
+required_for_next_step
 file_size
 sha256
 video_fps
@@ -483,9 +491,11 @@ height
 
 ---
 
-# 7. Tải dataset từ Roboflow
+# 7. Labeled detection datasets trên Roboflow
 
-Roboflow tiếp tục là nguồn quản lý dataset detection đã gán nhãn.
+Roboflow là source-of-truth cho dataset detection đã gán nhãn, các dataset version và train/validation/test split.
+
+Notebook 01 không gọi Roboflow API và chỉ inventory một local working copy nếu nó đã tồn tại. Việc restore/download đúng dataset version là bước riêng, chỉ thực hiện khi user phê duyệt và sau mọi authentication stop gate cần thiết.
 
 Mỗi lần dùng một version phải log:
 
@@ -1466,8 +1476,8 @@ Sau này chỉ cần:
 ```text
 git clone
 conda env create
-download Drive data
-download Roboflow dataset
+user tải/copy thủ công raw data cần thiết từ Drive
+restore đúng Roboflow dataset version khi được phê duyệt
 ```
 
 là tái lập được dự án.
@@ -1518,7 +1528,7 @@ không lưu model binary nếu file lớn.
 
 ```text
 checkpoint-00-environment
-checkpoint-01-data-inventory
+checkpoint-01-data-source-inventory
 checkpoint-02-dataset-audit
 checkpoint-03-detection-trained
 checkpoint-04-detection-evaluated
@@ -1557,9 +1567,9 @@ checkpoint-18-final-results
 ## Phase B — Restore data
 
 ```text
-[ ] Download raw video cần dùng từ Drive
-[ ] Download đúng Roboflow dataset versions
-[ ] Chạy Notebook 01 inventory
+[ ] USER tải/copy thủ công raw video cần dùng từ Drive vào data/raw/
+[ ] Restore đúng Roboflow dataset versions khi được phê duyệt
+[ ] USER chạy Notebook 01 data source inventory thủ công trong VS Code
 [ ] Chạy Notebook 02 dataset audit
 ```
 
@@ -1621,9 +1631,9 @@ Thứ tự chính xác:
 1. Chuẩn hóa repository
 2. Chạy environment check
 3. Chuẩn hóa paths
-4. Download một phần dữ liệu nhỏ
-5. Xác nhận notebook đọc được dữ liệu
-6. Download dataset Roboflow cần thiết
+4. USER tải/copy thủ công một phần raw data nhỏ nếu bước kế tiếp cần
+5. USER chạy Notebook 01 để inventory local và xác nhận dữ liệu còn thiếu
+6. Restore dataset Roboflow cần thiết khi được phê duyệt
 7. Reproduce YOLO validation
 8. Reproduce video detection
 9. Sau khi detection giống máy cũ mới chạy tracking
@@ -1781,8 +1791,8 @@ logs
 configs
 results
 environment file
-Drive source
-Roboflow source
+Drive archival source
+Roboflow labeled-dataset source
 model archive
 ```
 
@@ -1793,9 +1803,9 @@ model archive
 ```text
                     ┌─────────────────────┐
                     │    GOOGLE DRIVE     │
-                    │ raw video + sensor  │
+                    │ archival raw source │
                     └──────────┬──────────┘
-                               │ download
+                               │ USER manual download/copy
                                ▼
                     ┌─────────────────────┐
                     │     LOCAL WSL       │
@@ -1804,9 +1814,10 @@ model archive
 
                     ┌─────────────────────┐
                     │      ROBOFLOW       │
-                    │ labeled datasets    │
+                    │ labeled source-of-  │
+                    │ truth datasets      │
                     └──────────┬──────────┘
-                               │ download
+                               │ approved dataset restore
                                ▼
                     ┌─────────────────────┐
                     │ data/roboflow       │
@@ -1864,7 +1875,7 @@ Dữ liệu lớn chỉ là tài nguyên tạm trên máy:
 ```text
 Drive / Roboflow
       ↓
-download
+USER manual raw copy / approved dataset restore
       ↓
 experiment
       ↓

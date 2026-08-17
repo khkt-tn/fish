@@ -1,0 +1,63 @@
+{
+  "dataset_source": "roboflow",
+  "workspace": "phys-hus",
+  "project": "fish_front_detection",
+  "version": 1,
+  "export_format": "yolov8",
+  "download_date": null,
+  "split_counts": [
+    {
+      "split": "train",
+      "n_images": 1015,
+      "n_label_files": 1015,
+      "n_missing_labels": 0,
+      "n_orphan_labels": 0,
+      "n_empty_labels": 0,
+      "n_boxes": 3888,
+      "bbox_rows": 3847,
+      "polygon_rows": 41,
+      "bbox_files": 1006,
+      "polygon_files": 9,
+      "mixed_format_files": 0
+    },
+    {
+      "split": "valid",
+      "n_images": 254,
+      "n_label_files": 254,
+      "n_missing_labels": 0,
+      "n_orphan_labels": 0,
+      "n_empty_labels": 0,
+      "n_boxes": 995,
+      "bbox_rows": 985,
+      "polygon_rows": 10,
+      "bbox_files": 251,
+      "polygon_files": 3,
+      "mixed_format_files": 0
+    }
+  ],
+  "annotation_format_counts": [
+    {
+      "split": "train",
+      "bbox_rows": 3847,
+      "polygon_rows": 41,
+      "bbox_files": 1006,
+      "polygon_files": 9,
+      "mixed_format_files": 0
+    },
+    {
+      "split": "valid",
+      "bbox_rows": 985,
+      "polygon_rows": 10,
+      "bbox_files": 251,
+      "polygon_files": 3,
+      "mixed_format_files": 0
+    }
+  ],
+  "class_names": {
+    "0": "Ca"
+  },
+  "total_images": 1269,
+  "total_boxes": 4883,
+  "dataset_local_path": "data/roboflow/front_detect_v1",
+  "data_yaml_sha256": "35ee2fe8127ad60a6994981deb777c17bcc6f3c54a0546a12b08f6de25c42d6b"
+}

@@ -1,0 +1,2 @@
+camera,workspace,project,version,format,local_path,download_datetime
+front,phys-hus,fish_front_detection,1,yolov8,data/roboflow/front_detect_v1,
