@@ -1,0 +1,9 @@
+{
+  "experiment_id": "FRONT_MOT_GT_EVAL_001",
+  "selected_frames": 200,
+  "gt_object_rows": 768,
+  "match_iou_threshold": 0.5,
+  "matching": "LAPJV",
+  "HOTA": null,
+  "note": "HOTA not hand-implemented; track_id is not biological identity."
+}

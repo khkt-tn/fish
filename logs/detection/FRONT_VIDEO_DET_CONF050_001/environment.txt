@@ -1,0 +1,12 @@
+experiment_id=FRONT_VIDEO_DET_CONF050_001
+datetime_utc=2026-08-17T06:36:23.423846+00:00
+git_commit=4cfac689c08d0f3f25bdee9cb8aac99d3202b9ee
+python_executable=/home/diy-hus/miniconda3/envs/fish/bin/python
+python=3.11.15
+conda_env=fish
+torch=2.13.0+cu130
+cuda_runtime=13.0
+cuda_available=True
+gpu=NVIDIA GeForce RTX 3050
+ultralytics=8.4.120
+opencv=4.10.0

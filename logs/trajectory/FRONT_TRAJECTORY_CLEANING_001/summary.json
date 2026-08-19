@@ -1,0 +1,13 @@
+{
+  "experiment_id": "FRONT_TRAJECTORY_CLEANING_001",
+  "selected_tracker": "BYTE_B15",
+  "max_interp_gap_frames": 3,
+  "smooth_window_frames": 5,
+  "cleaned_rows": 40845,
+  "trajectory_segments": 286,
+  "interpolated_rows": 74,
+  "outputs": [
+    "results/trajectory/front_cleaned_trajectories.csv",
+    "results/trajectory/front_trajectory_cleaning_qc.csv"
+  ]
+}

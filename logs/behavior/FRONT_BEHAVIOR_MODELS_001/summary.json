@@ -1,0 +1,31 @@
+{
+  "experiment_id": "FRONT_BEHAVIOR_MODELS_001",
+  "trainable_windows": 98,
+  "classes": [
+    "NORMAL_SWIM",
+    "PAIR_INTERACTION",
+    "SHELTER_TRANSITION",
+    "FEEDING"
+  ],
+  "n_classes": 4,
+  "class_counts": {
+    "NORMAL_SWIM": 54,
+    "PAIR_INTERACTION": 21,
+    "SHELTER_TRANSITION": 16,
+    "FEEDING": 7
+  },
+  "cv_method": "StratifiedGroupKFold",
+  "cv_splits": 5,
+  "best_model": "RANDOM_FOREST",
+  "best_macro_f1_mean": 0.45712108554213826,
+  "best_balanced_accuracy_mean": 0.47940420690420693,
+  "taxonomy_note": "Four modeled behaviors only: NORMAL_SWIM, PAIR_INTERACTION, SHELTER_TRANSITION, FEEDING. LOW_ACTIVITY excluded because no confirmed GT windows were observed; UNCERTAIN/EXCLUDE are QC states.",
+  "small_class_warning": "FEEDING has limited GT windows; interpret per-class and macro-F1 metrics cautiously.",
+  "outputs": [
+    "results/behavior/front_behavior_model_comparison.csv",
+    "results/behavior/front_behavior_cv_predictions.csv",
+    "results/behavior/front_behavior_cv_fold_class_coverage.csv",
+    "models/behavior/front_behavior_model.joblib",
+    "models/behavior/front_behavior_model_metadata.json"
+  ]
+}

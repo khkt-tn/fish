@@ -1,0 +1,4 @@
+context,configuration,count_MAE,exact_count_rate,note
+validation_images,conf=0.25,0.326771653543307,0.7598425196850394,Validation images and this raw video are different evaluation contexts. Count diagnostics may reveal a domain/performance gap; mAP and count metrics are not directly comparable as the same metric.
+raw_video,D025,6.392013990090352,0.0,Validation images and this raw video are different evaluation contexts. Count diagnostics may reveal a domain/performance gap; mAP and count metrics are not directly comparable as the same metric.
+raw_video,D010,2.0029146021568054,0.1334887787816963,Validation images and this raw video are different evaluation contexts. Count diagnostics may reveal a domain/performance gap; mAP and count metrics are not directly comparable as the same metric.

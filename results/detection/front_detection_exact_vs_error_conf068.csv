@@ -1,0 +1,2 @@
+frame_group,frames,mean_mean_detection_confidence,mean_median_detection_confidence,mean_minimum_detection_confidence,mean_mean_bbox_area,mean_minimum_center_distance,mean_maximum_pairwise_iou,mean_near_threshold_detections,mean_near_edge_detections,high_bbox_overlap_frame_rate
+ERROR,3431,0.7486294479486166,0.7486294479486166,0.7486294479486166,15801.58865138549,,0.0,0.48469833867677065,0.0,0.0

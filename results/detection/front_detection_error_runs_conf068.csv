@@ -1,0 +1,2 @@
+start_frame,end_frame,duration_frames,duration_sec,error_type,mean_count,minimum_count,maximum_count
+0,3430,3431,119.67867666666668,UNDERCOUNT,0.6706499562809677,0,1

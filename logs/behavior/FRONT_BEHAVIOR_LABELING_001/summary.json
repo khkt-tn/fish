@@ -1,0 +1,33 @@
+{
+  "experiment_id": "FRONT_BEHAVIOR_LABELING_001",
+  "manifest_windows": 98,
+  "labeled_windows": 98,
+  "annotation_taxonomy": [
+    "NORMAL_SWIM",
+    "LOW_ACTIVITY",
+    "FEEDING",
+    "SHELTER_TRANSITION",
+    "PAIR_INTERACTION",
+    "UNCERTAIN",
+    "EXCLUDE"
+  ],
+  "model_behavior_classes": [
+    "NORMAL_SWIM",
+    "PAIR_INTERACTION",
+    "SHELTER_TRANSITION",
+    "FEEDING"
+  ],
+  "model_class_count": 4,
+  "model_trainable_windows": 98,
+  "model_class_counts": {
+    "NORMAL_SWIM": 54,
+    "PAIR_INTERACTION": 21,
+    "SHELTER_TRANSITION": 16,
+    "FEEDING": 7
+  },
+  "taxonomy_decision_note": "LOW_ACTIVITY excluded from modeling because no confirmed GT windows were observed. UNCERTAIN and EXCLUDE remain annotation QC states.",
+  "outputs": [
+    "results/behavior/front_behavior_labeling_manifest.csv",
+    "results/behavior/front_behavior_labels.csv"
+  ]
+}

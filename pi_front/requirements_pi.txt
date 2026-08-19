@@ -1,0 +1,8 @@
+# Python-level dependencies for the Pi demo.
+# Install the current Coral Edge TPU runtime separately at OS level.
+ultralytics==8.4.120
+tflite-runtime
+numpy
+joblib
+scikit-learn
+opencv-python

@@ -43,3 +43,6 @@ artifacts_local/
 *.key
 credentials*.json
 token*.json
+
+# EdgeTPU export temporary calibration artifact
+pi_front/calibration_image_sample_data_*.npy

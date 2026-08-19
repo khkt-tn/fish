@@ -1,0 +1,13 @@
+{
+  "experiment_id": "FRONT_BEHAVIOR_FEATURES_001",
+  "window_sec": 5.0,
+  "step_sec": 1.0,
+  "individual_windows": 706,
+  "group_windows": 312,
+  "feature_count": 23,
+  "outputs": [
+    "results/behavior/front_individual_behavior_features.csv",
+    "results/behavior/front_group_behavior_features.csv",
+    "results/behavior/front_behavior_feature_schema.json"
+  ]
+}

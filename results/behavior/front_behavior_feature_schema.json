@@ -1,0 +1,38 @@
+{
+  "experiment_id": "FRONT_BEHAVIOR_FEATURES_001",
+  "window_sec": 5.0,
+  "step_sec": 1.0,
+  "trailing_distance_sec": 1.0,
+  "feature_columns": [
+    "coverage_ratio",
+    "observed_ratio",
+    "interpolated_ratio",
+    "distance_5s_px",
+    "distance_last_1s_px",
+    "net_displacement_px",
+    "path_efficiency",
+    "mean_speed_px_s",
+    "median_speed_px_s",
+    "max_speed_px_s",
+    "speed_std_px_s",
+    "mean_speed_norm_s",
+    "max_speed_norm_s",
+    "mean_abs_accel_px_s2",
+    "mean_abs_turn_rad",
+    "immobile_ratio",
+    "x_mean_norm",
+    "x_std_norm",
+    "x_range_norm",
+    "y_mean_norm",
+    "y_std_norm",
+    "y_range_norm",
+    "bbox_area_mean_norm"
+  ],
+  "pi_realtime_fields": [
+    "pred_track_id",
+    "distance_last_1s_px",
+    "mean_speed_px_s",
+    "x_mean_norm",
+    "y_mean_norm"
+  ]
+}
