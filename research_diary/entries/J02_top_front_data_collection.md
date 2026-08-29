@@ -76,13 +76,33 @@ timestamp: N/A
 description: IMG-J02-03 TOP và FRONT đặt cạnh nhau; IMG-J02-04 T1/T2 chỉ thêm sau khi xác minh
 -->
 
-## 12. Video minh họa
+## Video minh họa
 
-> 🎥 **V02 — Video raw camera TOP** — `pdNzzXow-tk`
->
-> 🎥 **V03 — Video raw camera FRONT** — `DzVF1SNC4fw`
+### V02 — Video raw camera TOP
 
-Khuyến nghị chỉ dùng đoạn 30–90 giây và không commit video.
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/pdNzzXow-tk"
+    title="V02 — Video raw camera TOP"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+### V03 — Video raw camera FRONT
+
+<div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/DzVF1SNC4fw"
+    title="V03 — Video raw camera FRONT"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+*Khuyến nghị sử dụng video minh họa ngắn, tập trung vào phần dữ liệu cần kiểm chứng; không lưu video dung lượng lớn trực tiếp trong Git.*
 
 ## 13. Đóng góp của thành viên
 
