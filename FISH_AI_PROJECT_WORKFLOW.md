@@ -144,8 +144,7 @@ fish/
 │   ├── 13_front_behavior_models.ipynb
 │   ├── 14_top_detection_tracking.ipynb
 │   ├── 15_top_behavior_features.ipynb
-│   ├── 16_sensor_sync.ipynb
-│   ├── 17_environment_behavior_analysis.ipynb
+│   ├── 16_environment_behavior_analysis.ipynb
 │   ├── 18_raspberrypi_export_benchmark.ipynb
 │   └── 19_final_results.ipynb
 │
@@ -1178,59 +1177,23 @@ Ghép hai camera theo thời gian trước khi nghĩ đến cross-camera identit
 
 ---
 
-# 23. Sensor synchronization
+# 23–24. Tích hợp môi trường và phân tích hành vi
 
-## Notebook 16 — `16_sensor_sync.ipynb`
+## Notebook 16 — `16_environment_behavior_analysis.ipynb`
 
-Đồng bộ:
+Notebook 16 gộp bước đồng bộ sensor và phân tích môi trường–hành vi. Notebook 17 cũ đã được gộp vào Notebook 16; không tạo notebook 17 riêng.
 
-```text
-video timestamp
-sensor timestamp
-```
-
-Sensor:
+Với sensor chỉ có `sensor_at_start` và `sensor_at_end`, các giá trị môi trường là context cấp phiên:
 
 ```text
-temperature
-pH
-light
-...
-```
-
-Output:
-
-```text
-time
-behavior features
-environment variables
-```
-
----
-
-# 24. Phân tích môi trường ↔ hành vi
-
-## Notebook 17 — `17_environment_behavior_analysis.ipynb`
-
-Mục tiêu:
-
-```text
-environment condition
+session-level environment metadata
+        +
+behavior feature windows
         ↓
-behavioral response metrics
+descriptive observational comparison between sessions
 ```
 
-Ưu tiên báo cáo:
-
-```text
-effect size
-distribution
-confidence interval
-correlation / regression
-repeated measures nếu phù hợp
-```
-
-Không chỉ báo p-value.
+Không nội suy sensor theo giây, không giả lập sensor cho từng window và không suy luận nhân quả khi mỗi điều kiện chỉ có một phiên quan sát.
 
 ---
 
@@ -1605,8 +1568,7 @@ checkpoint-18-final-results
 ```text
 [ ] Notebook 14 Top tracking
 [ ] Notebook 15 Top features
-[ ] Notebook 16 sensor sync
-[ ] Notebook 17 environment-behavior
+[ ] Notebook 16 environment + behavior integration and analysis
 ```
 
 ## Phase G — Deployment and paper

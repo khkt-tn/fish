@@ -1,0 +1,33 @@
+experiment_id: TOP_ENV_BEHAVIOR_001
+analysis_type: descriptive_observational_comparison
+environment_context_level: session
+sensor_interpolation: none
+sensor_files:
+  TOP_VIDEO_1: data/raw/sensors/1.json
+  TOP_VIDEO_2: data/raw/sensors/2.json
+individual_behavior_file: outputs/top/behavior/top_individual_window_features.csv
+group_behavior_file: outputs/top/behavior/top_group_window_features.csv
+accepted_behavior_sha256:
+  individual: 2a6a3396a41de3c5ac78b4a1391aa2c11858a8cfde53633a18bbb1a10cb4faa7
+  group: ba5a2687d6c3b998f03a2b060c6084925de83537f186f0e4a7b54fec2d04c893
+session_mapping:
+  TOP_VIDEO_1:
+    local_video: 1.mp4
+    original_video: 1.mp4
+    session_id: 20260812_130428_T2_1
+    tank: T2
+    scenario: baseline
+  TOP_VIDEO_2:
+    local_video: 2.mp4
+    original_video: 4.mp4
+    session_id: 20260812_131321_T2_4
+    tank: T2
+    scenario: baseline
+individual_features:
+  - mean_speed_diag_s
+  - path_efficiency
+  - mean_abs_turn_rad
+group_features:
+  - mean_nnd_diag
+  - mean_group_rms_radius_diag
+  - mean_group_polarization

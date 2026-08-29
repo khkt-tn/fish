@@ -1,0 +1,134 @@
+{
+  "experiment_id": "TOP_ENV_BEHAVIOR_001",
+  "datetime_utc": "2026-08-29T09:58:49.499865+00:00",
+  "git_commit": "cc74ce9c4e7873380a0f88d360817f29b472bcd6",
+  "input_sensor_paths": {
+    "TOP_VIDEO_1": "data/raw/sensors/1.json",
+    "TOP_VIDEO_2": "data/raw/sensors/2.json"
+  },
+  "input_sensor_sha256": {
+    "TOP_VIDEO_1": "5cb582b53710638c60d28347030b1161c0bc71323441a5d821dc7d8c4ac72411",
+    "TOP_VIDEO_2": "18dec58ca18fc9a331bf65759a910c80a9ff8c779d1726cd6a7d9c64d4aff523"
+  },
+  "input_behavior_paths": {
+    "individual": "outputs/top/behavior/top_individual_window_features.csv",
+    "group": "outputs/top/behavior/top_group_window_features.csv"
+  },
+  "input_behavior_sha256": {
+    "individual": "2a6a3396a41de3c5ac78b4a1391aa2c11858a8cfde53633a18bbb1a10cb4faa7",
+    "group": "ba5a2687d6c3b998f03a2b060c6084925de83537f186f0e4a7b54fec2d04c893"
+  },
+  "session_mapping": {
+    "TOP_VIDEO_1": {
+      "source_video": "1.mp4",
+      "original_video_name": "1.mp4",
+      "session_id": "20260812_130428_T2_1",
+      "tank": "T2",
+      "scenario": "baseline",
+      "temperature": [
+        25.0,
+        25.0
+      ],
+      "ph": [
+        6.6,
+        6.6
+      ],
+      "light": [
+        203.0,
+        200.0
+      ]
+    },
+    "TOP_VIDEO_2": {
+      "source_video": "2.mp4",
+      "original_video_name": "4.mp4",
+      "session_id": "20260812_131321_T2_4",
+      "tank": "T2",
+      "scenario": "baseline",
+      "temperature": [
+        25.0,
+        25.0
+      ],
+      "ph": [
+        6.6,
+        6.6
+      ],
+      "light": [
+        164.0,
+        165.0
+      ]
+    }
+  },
+  "selected_features": {
+    "individual": [
+      "mean_speed_diag_s",
+      "path_efficiency",
+      "mean_abs_turn_rad"
+    ],
+    "group": [
+      "mean_nnd_diag",
+      "mean_group_rms_radius_diag",
+      "mean_group_polarization"
+    ]
+  },
+  "environment_context_level": "session",
+  "sensor_interpolation": "none",
+  "row_counts": {
+    "environment_sessions": 2,
+    "individual_integrated_windows": 382,
+    "group_integrated_windows": 167,
+    "summary_rows": 2,
+    "comparison_rows": 6
+  },
+  "output_paths": {
+    "individual_integrated": "outputs/top/environment_behavior/top_individual_environment_behavior.csv",
+    "group_integrated": "outputs/top/environment_behavior/top_group_environment_behavior.csv",
+    "environment_session_summary": "results/environment/environment_session_summary.csv",
+    "environment_behavior_summary": "results/environment/environment_behavior_summary.csv",
+    "environment_behavior_comparison": "results/environment/environment_behavior_comparison.csv"
+  },
+  "output_sha256": {
+    "individual_integrated": "dc6eb555216d0e887c2e3ad3f0d1326cae345e3ddd4dd3f9c8727c3ff626e506",
+    "group_integrated": "6e0d648635b77f3e6fb72b92961643ff89d0db01785a44fc0fcff5b068580fb7",
+    "environment_session_summary": "cde15843c3e3b0373e18e4d2ba2974b6ffb49a25141ddc0347f35ab1b7d14f38",
+    "environment_behavior_summary": "3ee0582e10f82d4ef0dfca6a6866877684b4d22b14f5068a95f3928e6fb9bdaa",
+    "environment_behavior_comparison": "4aaf10aaa81c04b54ce687553024c6f3ae3a7ec58495fb36735768f75bd8e231"
+  },
+  "plot_paths": [
+    "results/environment/plots/top_environment_session_conditions.png",
+    "results/environment/plots/top_individual_speed_comparison.png",
+    "results/environment/plots/top_individual_turning_path_efficiency.png",
+    "results/environment/plots/top_group_nearest_neighbor_comparison.png",
+    "results/environment/plots/top_group_dispersion_comparison.png",
+    "results/environment/plots/top_group_polarization_comparison.png"
+  ],
+  "plot_sha256": {
+    "top_environment_session_conditions.png": "da393ebc95662796cddc925891a690383d9ff2db00e33dc83eaeb9b3506015cc",
+    "top_individual_speed_comparison.png": "6a8dcf5ad939fcf69643caeece9bc5c351a974b41768afdf89c74f5ad5cb9e12",
+    "top_individual_turning_path_efficiency.png": "004d14e9e8ff2b69aad59152709fcf3c03af10898aa62752cd0b80c75e02a1e6",
+    "top_group_nearest_neighbor_comparison.png": "942e71d87d8c61e8007852b1bda779bddc2ce59b2856d24533ba2e07639f6a60",
+    "top_group_dispersion_comparison.png": "ec9ce86614baaad9e9ecb90a69586405b32e03bd177ea5fa72354508b750206f",
+    "top_group_polarization_comparison.png": "4520b96fb58c3d3654b4bde0ef5cf96922897ea82bdf728d589bf43bfd29980a"
+  },
+  "runtime_sec": 1.7691181850095745,
+  "warnings": [
+    "Sensor data contain only start and end readings; environment is session-level context and is not interpolated.",
+    "Temperature and pH are equal across the two sessions, so their effects are not testable.",
+    "There is one session at each recorded light level; light condition is confounded with session and causal inference is unsupported.",
+    "Behavior windows overlap and are not independent experimental replicates.",
+    "Tracker IDs and trajectory segments are not biological identities.",
+    "Group descriptors use observed tracker rows; active tracks are not a verified fish count.",
+    "No latent biological state such as stress, sickness, health, happiness, anxiety, or aggression is inferred."
+  ],
+  "decisions": {
+    "environmental_metadata": "PASS",
+    "environment_behavior_integration": "PASS_WITH_WARNING",
+    "behavior_comparison": "PASS_WITH_WARNING",
+    "causal_inference": "NOT_SUPPORTED",
+    "temperature_effect": "NOT_TESTABLE",
+    "ph_effect": "NOT_TESTABLE",
+    "light_condition_comparison": "DESCRIPTIVE_ONLY",
+    "notebook_16": "PASS_WITH_WARNING",
+    "research_analysis_ready": "YES"
+  },
+  "next_step": "STOP for user post-run audit; do not create Notebook 17."
+}
