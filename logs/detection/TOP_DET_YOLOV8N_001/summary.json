@@ -1,0 +1,17 @@
+{
+  "experiment_id": "TOP_DET_YOLOV8N_001",
+  "best_epoch": 65,
+  "precision": 0.96371,
+  "recall": 0.97792,
+  "mAP50": 0.98369,
+  "mAP50_95": 0.60575,
+  "training_runtime_sec": 1487.551,
+  "best_model_sha256": "216174c3a40d57bfd7b0d7e46eec90974ddb0b27c879dd1961543e3233a6c5e5",
+  "dataset_version": 2,
+  "git_commit": "622a94b808af2173b584cb6c5148603f93bac19c",
+  "model": "yolov8n.pt",
+  "data": "data/roboflow/top_detect_v2/data.yaml",
+  "best_model": "runs/top/yolov8n_top_v2_baseline/weights/best.pt",
+  "checkpoint_result": "PASS",
+  "warnings": []
+}

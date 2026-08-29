@@ -1,0 +1,8 @@
+python=3.11.15
+python_executable=/home/diy-hus/miniconda3/envs/fish/bin/python
+conda_env=fish
+torch=2.13.0+cu130
+cuda_available=True
+gpu=NVIDIA GeForce RTX 3050
+ultralytics=8.4.120
+git_commit=622a94b808af2173b584cb6c5148603f93bac19c

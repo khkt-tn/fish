@@ -1,0 +1,61 @@
+experiment_id: TOP_TRACK_BYTETRACK_B15_001
+dataset_workspace: phys-hus
+dataset_project: fish-top-detection
+dataset_version: 2
+dataset_format: yolov8
+dataset_manifest: results/detection/top_dataset_manifest.json
+detector_training_experiment_id: TOP_DET_YOLOV8N_001
+detector_validation_experiment_id: TOP_DET_YOLOV8N_EVAL_001
+model: runs/top/yolov8n_top_v2_baseline/weights/best.pt
+model_sha256: 216174c3a40d57bfd7b0d7e46eec90974ddb0b27c879dd1961543e3233a6c5e5
+imgsz: 640
+tracking_detection_floor: 0.5
+iou: 0.7
+tracker_config_path: configs/trackers/top_bytetrack_b15.yaml
+tracker_config_sha256: 5711cfadd793ce8463c2249ee490f5cb3639402cb290bb21357d9ef675ec7ace
+requested_tracker_config:
+  tracker_type: bytetrack
+  track_high_thresh: 0.68
+  track_low_thresh: 0.5
+  new_track_thresh: 0.68
+  track_buffer: 15
+  match_thresh: 0.8
+  fuse_score: true
+actual_tracker_configs:
+  1.mp4:
+    tracker_type: bytetrack
+    track_high_thresh: 0.68
+    track_low_thresh: 0.5
+    new_track_thresh: 0.68
+    track_buffer: 15
+    match_thresh: 0.8
+    fuse_score: true
+  2.mp4:
+    tracker_type: bytetrack
+    track_high_thresh: 0.68
+    track_low_thresh: 0.5
+    new_track_thresh: 0.68
+    track_buffer: 15
+    match_thresh: 0.8
+    fuse_score: true
+videos:
+- video_id: TOP_VIDEO_1
+  relative_path: data/raw/top/1.mp4
+  sha256: 57d09e2c4613fc383c2532d36f53bf15866409673ba2743f19a0574252606865
+  fps: 19.350642974397303
+  frame_count: 1119
+  resolution: 1280x960
+  duration_sec: 57.827535833333336
+- video_id: TOP_VIDEO_2
+  relative_path: data/raw/top/2.mp4
+  sha256: a92642426eb4a10d4390613a540cdc5a5374e22656b05e773c93f7fb1208274b
+  fps: 17.17219034092054
+  frame_count: 2031
+  resolution: 1280x960
+  duration_sec: 118.27262333333333
+true_fish_count: null
+tracker_state_reset_per_video: true
+top_identity_ground_truth_available: false
+official_mot_metrics_reported: false
+tank_metadata_available_from_roboflow_export: false
+tuning_performed: false

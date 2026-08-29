@@ -1,0 +1,93 @@
+{
+  "dataset_source": "roboflow",
+  "workspace": "phys-hus",
+  "project": "fish-top-detection",
+  "version": 2,
+  "export_format": "yolov8",
+  "download_datetime": "2026-08-29T04:27:41.954338+00:00",
+  "dataset_local_path": "data/roboflow/top_detect_v2",
+  "data_yaml_sha256": "9bac875b2c75e480847783e5cdd39fca7f7d24b75addb93aac563f98f24d26ca",
+  "dataset_manifest_sha256": "110d6a1730ec8ed7cdfbe5000903ac67b75594656a85071b553dbdec263d1a8c",
+  "class_names": {
+    "0": "ca"
+  },
+  "split_counts": [
+    {
+      "split": "train",
+      "n_images": 1207,
+      "n_label_files": 1207,
+      "n_missing_labels": 0,
+      "n_orphan_labels": 0,
+      "n_empty_labels": 0,
+      "n_boxes": 3738,
+      "bbox_rows": 3738,
+      "polygon_rows": 0,
+      "bbox_files": 1207,
+      "polygon_files": 0,
+      "mixed_format_files": 0
+    },
+    {
+      "split": "valid",
+      "n_images": 302,
+      "n_label_files": 302,
+      "n_missing_labels": 0,
+      "n_orphan_labels": 0,
+      "n_empty_labels": 0,
+      "n_boxes": 951,
+      "bbox_rows": 951,
+      "polygon_rows": 0,
+      "bbox_files": 302,
+      "polygon_files": 0,
+      "mixed_format_files": 0
+    }
+  ],
+  "annotation_format_counts": [
+    {
+      "split": "train",
+      "bbox_rows": 3738,
+      "polygon_rows": 0,
+      "unknown_rows": 0,
+      "bbox_files": 1207,
+      "polygon_files": 0,
+      "mixed_format_files": 0
+    },
+    {
+      "split": "valid",
+      "bbox_rows": 951,
+      "polygon_rows": 0,
+      "unknown_rows": 0,
+      "bbox_files": 302,
+      "polygon_files": 0,
+      "mixed_format_files": 0
+    }
+  ],
+  "resolution_distribution": [
+    {
+      "split": "train",
+      "width": 1040,
+      "height": 500,
+      "channels": 3,
+      "count": 1207
+    },
+    {
+      "split": "valid",
+      "width": 1040,
+      "height": 500,
+      "channels": 3,
+      "count": 302
+    }
+  ],
+  "total_images": 1509,
+  "total_boxes": 4689,
+  "exact_duplicate_groups": 0,
+  "cross_split_exact_duplicate_groups": 0,
+  "canonical_source_cross_split_groups": 0,
+  "tank_metadata_available": false,
+  "tank_counts": [],
+  "warnings": [
+    "Optional test split is absent; data.yaml contains a Roboflow test path but no local test directory.",
+    "T1/T2 stratification unavailable from exported filenames/metadata.",
+    "TOP class 0 name 'ca' differs by letter case from FRONT reference 'Ca'; class ID is compatible and labels are preserved unchanged.",
+    "Train and valid filenames use a generic t_<time>_<index> pattern without session identifiers; nearby-frame leakage cannot be excluded from exported metadata alone."
+  ]
+}

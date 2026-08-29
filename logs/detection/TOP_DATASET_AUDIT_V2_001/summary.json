@@ -1,0 +1,48 @@
+{
+  "experiment_id": "TOP_DATASET_AUDIT_V2_001",
+  "workspace": "phys-hus",
+  "project": "fish-top-detection",
+  "version": 2,
+  "format": "yolov8",
+  "dataset_root": "data/roboflow/top_detect_v2",
+  "split_counts": [
+    {
+      "split": "train",
+      "n_images": 1207,
+      "n_label_files": 1207,
+      "n_missing_labels": 0,
+      "n_orphan_labels": 0,
+      "n_empty_labels": 0,
+      "n_boxes": 3738,
+      "bbox_rows": 3738,
+      "polygon_rows": 0,
+      "mixed_format_files": 0
+    },
+    {
+      "split": "valid",
+      "n_images": 302,
+      "n_label_files": 302,
+      "n_missing_labels": 0,
+      "n_orphan_labels": 0,
+      "n_empty_labels": 0,
+      "n_boxes": 951,
+      "bbox_rows": 951,
+      "polygon_rows": 0,
+      "mixed_format_files": 0
+    }
+  ],
+  "classes": {
+    "0": "ca"
+  },
+  "invalid_label_rows": 0,
+  "corrupt_images": 0,
+  "exact_duplicate_groups": 0,
+  "canonical_source_cross_split_groups": 0,
+  "checkpoint_result": "PASS_WITH_WARNING",
+  "warnings": [
+    "Optional test split is absent; the Roboflow YAML test declaration has no local test directory.",
+    "T1/T2 stratification unavailable from exported filenames/metadata.",
+    "TOP class 0 name 'ca' differs by letter case from FRONT reference 'Ca'; class ID is compatible and labels are preserved unchanged.",
+    "Generic t_<time>_<index> filenames lack session identifiers; nearby-frame leakage cannot be excluded from export metadata alone."
+  ]
+}

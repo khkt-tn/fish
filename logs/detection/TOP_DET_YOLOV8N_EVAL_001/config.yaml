@@ -1,0 +1,7 @@
+experiment_id: TOP_DET_YOLOV8N_EVAL_001
+model: runs/top/yolov8n_top_v2_baseline/weights/best.pt
+model_sha256: 216174c3a40d57bfd7b0d7e46eec90974ddb0b27c879dd1961543e3233a6c5e5
+data: data/roboflow/top_detect_v2/data.yaml
+split: val
+imgsz: 640
+device: 0

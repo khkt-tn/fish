@@ -1,0 +1,8 @@
+experiment_id: TOP_DATASET_AUDIT_V2_001
+workspace: phys-hus
+project: fish-top-detection
+version: 2
+format: yolov8
+local_path: data/roboflow/top_detect_v2
+checksum: sha256
+dataset_mutated: false

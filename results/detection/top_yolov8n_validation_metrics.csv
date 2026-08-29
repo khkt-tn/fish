@@ -1,0 +1,2 @@
+scope,class_id,class_name,precision,recall,mAP50,mAP50_95,parameters,GFLOPs,model_size_MB,preprocess_ms,inference_ms,postprocess_ms,validation_runtime_sec,validation_images,validation_objects
+overall,,all,0.967530547941785,0.9713393817483137,0.9834169324420174,0.6062227869655318,3011043,8.1916928,5.941080093383789,0.5958101356368117,3.7445590926938697,1.1600030927081586,5.077,302,951

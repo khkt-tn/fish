@@ -1,0 +1,2 @@
+experiment_id,best_epoch,precision,recall,mAP50,mAP50_95,training_runtime_sec,best_model_sha256,dataset_version,git_commit
+TOP_DET_YOLOV8N_001,65,0.96371,0.97792,0.98369,0.60575,1487.551,216174c3a40d57bfd7b0d7e46eec90974ddb0b27c879dd1961543e3233a6c5e5,2,622a94b808af2173b584cb6c5148603f93bac19c

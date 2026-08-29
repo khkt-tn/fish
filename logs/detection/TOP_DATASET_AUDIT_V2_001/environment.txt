@@ -1,0 +1,11 @@
+datetime_utc=2026-08-29T04:38:09.663473+00:00
+python=3.11.15 (main, Jun 11 2026, 15:20:16) [GCC 14.3.0]
+python_executable=/home/diy-hus/miniconda3/envs/fish/bin/python
+conda_environment=fish
+platform=Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+torch=2.13.0+cu130
+cuda_available=False
+gpu=Not available
+ultralytics=8.4.120
+opencv=4.10.0
+git_commit=622a94b808af2173b584cb6c5148603f93bac19c

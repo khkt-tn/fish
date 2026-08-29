@@ -1,0 +1,23 @@
+{
+  "experiment_id": "TOP_DET_YOLOV8N_EVAL_001",
+  "scope": "overall",
+  "class_id": null,
+  "class_name": "all",
+  "precision": 0.967530547941785,
+  "recall": 0.9713393817483137,
+  "mAP50": 0.9834169324420174,
+  "mAP50_95": 0.6062227869655318,
+  "parameters": 3011043,
+  "GFLOPs": 8.1916928,
+  "model_size_MB": 5.941080093383789,
+  "preprocess_ms": 0.5958101356368117,
+  "inference_ms": 3.7445590926938697,
+  "postprocess_ms": 1.1600030927081586,
+  "validation_runtime_sec": 5.077,
+  "validation_images": 302,
+  "validation_objects": 951,
+  "model_sha256": "216174c3a40d57bfd7b0d7e46eec90974ddb0b27c879dd1961543e3233a6c5e5",
+  "checkpoint_result": "PASS",
+  "warnings": [],
+  "note": "Validation metrics are not test accuracy."
+}
