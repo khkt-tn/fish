@@ -3,7 +3,7 @@ journal_id: J01
 experiment_id: EXP-01
 title: "Xây dựng hệ thống thu nhận và lưu trữ dữ liệu"
 date: "2026-07-30"
-status: PARTIAL
+status: Đã xác minh · VERIFIED
 authors:
   - "Phạm Duy Quang Anh"
   - "Nguyễn Quốc Minh"
@@ -64,10 +64,10 @@ Nền tảng thu dữ liệu có bằng chứng gián tiếp qua dữ liệu đ�
 
 *Hình 11.1. Hệ thống Raspberry Pi và camera sử dụng để thu nhận dữ liệu.*
 
-## 13. Đóng góp của thành viên
+## 12. Đóng góp của thành viên
 
 Quang Anh - Quốc Minh
 
-## 14. Công việc tiếp theo
+## 13. Công việc tiếp theo
 
 Học sinh bổ sung log/ảnh gốc và xác nhận ngày; không đưa credential rclone hoặc raw video vào Git.
