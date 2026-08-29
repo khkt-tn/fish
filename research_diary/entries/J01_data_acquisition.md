@@ -2,7 +2,7 @@
 journal_id: J01
 experiment_id: EXP-01
 title: "Xây dựng hệ thống thu nhận và lưu trữ dữ liệu"
-date: "TO_VERIFY"
+date: "2026-07-30"
 status: PARTIAL
 authors:
   - "Phạm Duy Quang Anh"
@@ -59,35 +59,14 @@ Nền tảng thu dữ liệu có bằng chứng gián tiếp qua dữ liệu đ�
 - [`data source inventory log`](../../logs/data/notebook01_summary.txt)
 - [Danh sách unresolved](../evidence/unresolved.md)
 
-## 11. Hình ảnh đề xuất
+## 11. Hình ảnh minh họa
+![Raspberry Pi và camera thực tế](../assets/images/J01/IMG-J01-01_pi_camera.jpg)
 
-<!-- TODO_MEDIA:
-source: user-provided setup photo
-timestamp: N/A
-description: IMG-J01-01 Raspberry Pi và camera thực tế
--->
-
-<!-- TODO_MEDIA:
-source: original acquisition machine
-timestamp: N/A
-description: IMG-J01-02 cấu trúc thư mục dataset
--->
-
-<!-- TODO_MEDIA:
-source: original terminal capture
-timestamp: N/A
-description: IMG-J01-03 terminal hiển thị collector/rclone
--->
-
-## 12. Video minh họa
-
-> 🎥 **V01 — Hệ thống camera và Raspberry Pi đang thu dữ liệu**
->
-> YouTube: `TODO_YOUTUBE_VIDEO_ID`
+*Hình 11.1. Hệ thống Raspberry Pi và camera sử dụng để thu nhận dữ liệu.*
 
 ## 13. Đóng góp của thành viên
 
-`TO_VERIFY_WITH_STUDENTS`: chưa có evidence phân chia việc lắp đặt, lập trình collector hoặc quản lý Drive.
+Quang Anh - Quốc Minh
 
 ## 14. Công việc tiếp theo
 
