@@ -60,7 +60,7 @@ Nền tảng thu dữ liệu có bằng chứng gián tiếp qua dữ liệu đ�
 - [Danh sách unresolved](../evidence/unresolved.md)
 
 ## 11. Hình ảnh minh họa
-![Raspberry Pi và camera thực tế](../assets/images/J01/IMG-J01-01_pi_camera.jpg)
+![Raspberry Pi và camera thực tế](../assets/images/J01/system.jpg)
 
 *Hình 11.1. Hệ thống Raspberry Pi và camera sử dụng để thu nhận dữ liệu.*
 
