@@ -3,7 +3,7 @@ journal_id: J01
 experiment_id: EXP-01
 title: "Xây dựng hệ thống thu nhận và lưu trữ dữ liệu"
 date: "2026-07-30"
-status: Đã xác minh · VERIFIED
+status: VERIFIED
 authors:
   - "Phạm Duy Quang Anh"
   - "Nguyễn Quốc Minh"
