@@ -43,7 +43,7 @@ Repository có đủ raw video local để tiếp tục pipeline cho cả TOP v�
 
 ## 7. Vấn đề phát sinh
 
-Ngày thu raw video Front chưa được xác minh. Tên file đơn giản như `3.mp4` hoặc `8.mp4` không đủ để kết luận tank, nền hay kịch bản nếu thiếu manifest nguồn.
+Không
 
 ## 8. Điều chỉnh và cải tiến
 
@@ -62,11 +62,7 @@ Việc thu dữ liệu hai góc nhìn được xác minh bằng raw working copy
 
 ## 11. Hình ảnh đề xuất
 
-<!-- TODO_MEDIA:
-source: data/raw/top/1.mp4
-timestamp: 00:00:10
-description: IMG-J02-01 frame TOP
--->
+![Quá trình thu thập dataset](../assets/images/J01/2.jpg)
 
 <!-- TODO_MEDIA:
 source: data/raw/front/3.mp4
@@ -82,15 +78,15 @@ description: IMG-J02-03 TOP và FRONT đặt cạnh nhau; IMG-J02-04 T1/T2 chỉ
 
 ## 12. Video minh họa
 
-> 🎥 **V02 — Video raw camera TOP** — `TODO_YOUTUBE_VIDEO_ID`
+> 🎥 **V02 — Video raw camera TOP** — `pdNzzXow-tk`
 >
-> 🎥 **V03 — Video raw camera FRONT** — `TODO_YOUTUBE_VIDEO_ID`
+> 🎥 **V03 — Video raw camera FRONT** — `DzVF1SNC4fw`
 
 Khuyến nghị chỉ dùng đoạn 30–90 giây và không commit video.
 
 ## 13. Đóng góp của thành viên
 
-`TO_VERIFY_WITH_STUDENTS`: cần xác nhận người lắp camera, vận hành từng phiên và kiểm tra dữ liệu.
+`Quang Anh - Quốc Minh.
 
 ## 14. Công việc tiếp theo
 
