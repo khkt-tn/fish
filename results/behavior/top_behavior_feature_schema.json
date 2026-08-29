@@ -1,0 +1,975 @@
+{
+  "experiment_id": "TOP_BEHAVIOR_FEATURES_001",
+  "camera": "top",
+  "window_sec": 5.0,
+  "step_sec": 1.0,
+  "experimental_context": "UNKNOWN",
+  "arena_geometry": null,
+  "wall_metrics_available": false,
+  "biological_identity_established": false,
+  "features": [
+    {
+      "name": "camera",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Camera view; fixed to top.",
+      "source": "Notebook configuration",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "experimental_context",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Experimental condition metadata; UNKNOWN in this checkpoint.",
+      "source": "Notebook configuration",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "video_id",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Stable video identifier from Notebook 14.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "source_video",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Source video filename.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_id",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Unique individual-window key.",
+      "source": "Notebook 15",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "trajectory_uid",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Video-local same-track same-segment key.",
+      "source": "Notebook 15 segmentation",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "track_id",
+      "level": "identifier",
+      "unit": "tracker_id",
+      "definition": "Video-local ByteTrack identifier.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_start_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Inclusive global window start time.",
+      "source": "Notebook 15 global grid",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_end_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Exclusive global window end time.",
+      "source": "Notebook 15 global grid",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_mid_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Midpoint of the global time window.",
+      "source": "Notebook 15 global grid",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "fps_source",
+      "level": "identifier",
+      "unit": "frames/s",
+      "definition": "Source video frame rate.",
+      "source": "Video metadata verified against Notebook 14",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "n_points",
+      "level": "quality",
+      "unit": "count",
+      "definition": "Cleaned trajectory points within an individual window.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "coverage_ratio",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Cleaned points divided by expected source frames in the global window.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "observed_ratio",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Fraction of individual-window rows directly observed by the tracker.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "interpolated_ratio",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Fraction of individual-window rows inserted by short-gap interpolation.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "window_time_span_sec",
+      "level": "quality",
+      "unit": "seconds",
+      "definition": "Elapsed time between first and last retained point in the window.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "mean_detection_confidence",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Mean detector confidence over observed rows only.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "path_length_px",
+      "level": "individual_window",
+      "unit": "px",
+      "definition": "Sum of within-window cleaned step distances.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "path_length_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Path length divided by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "net_displacement_px",
+      "level": "individual_window",
+      "unit": "px",
+      "definition": "Distance between first and last cleaned point in the window.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "net_displacement_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Net displacement divided by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "path_efficiency",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Net displacement divided by path length.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when the mathematical denominator or valid movement sequence is unavailable.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "mean_speed_px_s",
+      "level": "individual_window",
+      "unit": "px/s",
+      "definition": "Mean cleaned step speed.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "median_speed_px_s",
+      "level": "individual_window",
+      "unit": "px/s",
+      "definition": "Median cleaned step speed.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "max_speed_px_s",
+      "level": "individual_window",
+      "unit": "px/s",
+      "definition": "Maximum cleaned step speed.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "p95_speed_px_s",
+      "level": "individual_window",
+      "unit": "px/s",
+      "definition": "95th percentile cleaned step speed.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "speed_std_px_s",
+      "level": "individual_window",
+      "unit": "px/s",
+      "definition": "Population standard deviation of cleaned step speed.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "mean_speed_diag_s",
+      "level": "individual_window",
+      "unit": "diag/s",
+      "definition": "Mean speed normalized by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "median_speed_diag_s",
+      "level": "individual_window",
+      "unit": "diag/s",
+      "definition": "Median speed normalized by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "max_speed_diag_s",
+      "level": "individual_window",
+      "unit": "diag/s",
+      "definition": "Maximum speed normalized by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "mean_abs_accel_px_s2",
+      "level": "individual_window",
+      "unit": "px/s^2",
+      "definition": "Mean absolute finite-difference acceleration.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "p95_abs_accel_px_s2",
+      "level": "individual_window",
+      "unit": "px/s^2",
+      "definition": "95th percentile absolute finite-difference acceleration.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "mean_abs_accel_diag_s2",
+      "level": "individual_window",
+      "unit": "diag/s^2",
+      "definition": "Mean absolute acceleration normalized by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "mean_abs_turn_rad",
+      "level": "individual_window",
+      "unit": "rad",
+      "definition": "Mean absolute wrapped change between successive valid headings.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "median_abs_turn_rad",
+      "level": "individual_window",
+      "unit": "rad",
+      "definition": "Median absolute wrapped heading change.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "p95_abs_turn_rad",
+      "level": "individual_window",
+      "unit": "rad",
+      "definition": "95th percentile absolute wrapped heading change.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "cumulative_abs_turn_rad",
+      "level": "individual_window",
+      "unit": "rad",
+      "definition": "Sum of absolute wrapped heading changes.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "turn_rate_rad_s",
+      "level": "individual_window",
+      "unit": "rad/s",
+      "definition": "Cumulative absolute turn divided by observed window time span.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when the mathematical denominator or valid movement sequence is unavailable.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "heading_resultant_length",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Magnitude of the mean within-trajectory heading unit vector.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when the mathematical denominator or valid movement sequence is unavailable.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "distance_last_1s_px",
+      "level": "individual_window",
+      "unit": "px",
+      "definition": "Cleaned path length during the final one second of the window.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "distance_last_1s_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Final-one-second path length divided by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "x_mean_norm",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Mean cleaned x coordinate divided by frame width.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "x_std_norm",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Population standard deviation of normalized x.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "x_range_norm",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Range of normalized x.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "y_mean_norm",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Mean cleaned y coordinate divided by frame height.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "y_std_norm",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Population standard deviation of normalized y.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "y_range_norm",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Range of normalized y.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "mean_distance_to_frame_center_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Mean distance to image-frame center divided by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity. Image-frame geometry is not calibrated tank geometry."
+    },
+    {
+      "name": "median_distance_to_frame_center_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Median distance to image-frame center divided by image diagonal.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity. Image-frame geometry is not calibrated tank geometry."
+    },
+    {
+      "name": "mean_distance_to_nearest_frame_edge_min_dim",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Mean nearest image-edge distance divided by minimum frame dimension.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity. Image-frame geometry is not calibrated tank geometry."
+    },
+    {
+      "name": "median_distance_to_nearest_frame_edge_min_dim",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Median nearest image-edge distance divided by minimum frame dimension.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity. Image-frame geometry is not calibrated tank geometry."
+    },
+    {
+      "name": "frame_edge_band_ratio",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Fraction of rows within the configured image-frame edge band.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity. Image-frame geometry is not calibrated tank geometry."
+    },
+    {
+      "name": "frame_center_box_ratio",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Fraction of rows within the configured image-frame center box.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity. Image-frame geometry is not calibrated tank geometry."
+    },
+    {
+      "name": "mean_nnd_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Mean valid nearest-neighbor distance at the stated level.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "median_nnd_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Median valid nearest-neighbor distance at the stated level.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "min_nnd_diag",
+      "level": "individual_window",
+      "unit": "diag",
+      "definition": "Minimum valid nearest-neighbor distance in an individual window.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "neighbor_observation_ratio",
+      "level": "individual_window",
+      "unit": "ratio",
+      "definition": "Observed individual rows with a valid neighbor divided by observed individual rows.",
+      "source": "Cleaned within-segment trajectory",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Same-track same-segment descriptor; tracker ID is not biological identity."
+    },
+    {
+      "name": "camera",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Camera view; fixed to top.",
+      "source": "Notebook configuration",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "experimental_context",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Experimental condition metadata; UNKNOWN in this checkpoint.",
+      "source": "Notebook configuration",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "video_id",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Stable video identifier from Notebook 14.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "source_video",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Source video filename.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "frame_index",
+      "level": "identifier",
+      "unit": "frame",
+      "definition": "Zero-based source frame index.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "time_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Frame time derived from frame index and source FPS.",
+      "source": "Notebook 15",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "n_active_tracks",
+      "level": "group_frame",
+      "unit": "count",
+      "definition": "Observed active tracker rows in a frame.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "group_centroid_x_norm",
+      "level": "group_frame",
+      "unit": "ratio",
+      "definition": "Mean observed-track x coordinate divided by frame width.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "group_centroid_y_norm",
+      "level": "group_frame",
+      "unit": "ratio",
+      "definition": "Mean observed-track y coordinate divided by frame height.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_nnd_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "Mean valid nearest-neighbor distance at the stated level.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_nnd_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "Median valid nearest-neighbor distance at the stated level.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_pairwise_distance_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "Mean unique-pair distance normalized by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_pairwise_distance_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "Median unique-pair distance normalized by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "min_pairwise_distance_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "Minimum unique-pair distance normalized by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "max_pairwise_distance_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "Maximum unique-pair distance normalized by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "group_rms_radius_diag",
+      "level": "group_frame",
+      "unit": "diag",
+      "definition": "RMS distance to observed group centroid divided by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "group_bbox_area_ratio",
+      "level": "group_frame",
+      "unit": "ratio",
+      "definition": "Observed-track bounding rectangle area divided by frame area.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "group_convex_hull_area_ratio",
+      "level": "group_frame",
+      "unit": "ratio",
+      "definition": "Observed-track convex-hull area divided by frame area.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when fewer than three observed active tracks are present.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "group_polarization",
+      "level": "group_frame",
+      "unit": "ratio",
+      "definition": "Magnitude of mean valid observed-track heading unit vectors.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "n_valid_headings",
+      "level": "quality",
+      "unit": "count",
+      "definition": "Observed active tracks with a valid non-zero within-segment heading.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "camera",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Camera view; fixed to top.",
+      "source": "Notebook configuration",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "experimental_context",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Experimental condition metadata; UNKNOWN in this checkpoint.",
+      "source": "Notebook configuration",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "video_id",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Stable video identifier from Notebook 14.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "source_video",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Source video filename.",
+      "source": "Notebook 14 tracking output",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "group_window_id",
+      "level": "identifier",
+      "unit": "category",
+      "definition": "Unique group-window key.",
+      "source": "Notebook 15",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_start_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Inclusive global window start time.",
+      "source": "Notebook 15 global grid",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_end_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Exclusive global window end time.",
+      "source": "Notebook 15 global grid",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "window_mid_sec",
+      "level": "identifier",
+      "unit": "seconds",
+      "definition": "Midpoint of the global time window.",
+      "source": "Notebook 15 global grid",
+      "missingness_rule": "Required; never missing in emitted rows.",
+      "scientific_caution": "Identifier/metadata only; it is not a biological label."
+    },
+    {
+      "name": "expected_frames",
+      "level": "quality",
+      "unit": "count",
+      "definition": "Number of source frames in the global half-open window.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "frames_with_any_track",
+      "level": "quality",
+      "unit": "count",
+      "definition": "Frames with at least one observed active tracker row.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "group_frame_coverage",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Frames with any observed track divided by expected frames.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "frames_with_2plus_tracks",
+      "level": "quality",
+      "unit": "count",
+      "definition": "Frames with at least two observed active tracker rows.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "social_metric_frame_ratio",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Frames supporting pairwise geometry divided by expected frames.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    },
+    {
+      "name": "mean_active_tracks",
+      "level": "group_window",
+      "unit": "count",
+      "definition": "Mean observed active tracker rows across all window frames.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_active_tracks",
+      "level": "group_window",
+      "unit": "count",
+      "definition": "Median observed active tracker rows across all window frames.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "min_active_tracks",
+      "level": "group_window",
+      "unit": "count",
+      "definition": "Minimum observed active tracker rows across all window frames.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "max_active_tracks",
+      "level": "group_window",
+      "unit": "count",
+      "definition": "Maximum observed active tracker rows across all window frames.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_group_centroid_x_norm",
+      "level": "group_window",
+      "unit": "ratio",
+      "definition": "Window mean of valid frame group-centroid x.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_group_centroid_y_norm",
+      "level": "group_window",
+      "unit": "ratio",
+      "definition": "Window mean of valid frame group-centroid y.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_nnd_diag",
+      "level": "group_window",
+      "unit": "diag",
+      "definition": "Mean valid nearest-neighbor distance at the stated level.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_nnd_diag",
+      "level": "group_window",
+      "unit": "diag",
+      "definition": "Median valid nearest-neighbor distance at the stated level.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_pairwise_distance_diag",
+      "level": "group_window",
+      "unit": "diag",
+      "definition": "Mean unique-pair distance normalized by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_pairwise_distance_diag",
+      "level": "group_window",
+      "unit": "diag",
+      "definition": "Median unique-pair distance normalized by image diagonal.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_group_rms_radius_diag",
+      "level": "group_window",
+      "unit": "diag",
+      "definition": "Window mean of valid frame group RMS radius.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_group_rms_radius_diag",
+      "level": "group_window",
+      "unit": "diag",
+      "definition": "Window median of valid frame group RMS radius.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_group_bbox_area_ratio",
+      "level": "group_window",
+      "unit": "ratio",
+      "definition": "Window mean of frame group bounding-area ratio.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when no valid source value exists at this level.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_group_convex_hull_area_ratio",
+      "level": "group_window",
+      "unit": "ratio",
+      "definition": "Window mean of valid frame convex-hull area ratio.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when fewer than three observed active tracks are present.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "mean_group_polarization",
+      "level": "group_window",
+      "unit": "ratio",
+      "definition": "Window mean of valid frame polarization.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "median_group_polarization",
+      "level": "group_window",
+      "unit": "ratio",
+      "definition": "Window median of valid frame polarization.",
+      "source": "Observed-only group geometry",
+      "missingness_rule": "NaN when the required neighbor count or valid headings are unavailable.",
+      "scientific_caution": "Instantaneous tracker-observed group descriptor; active tracks are not a verified fish count."
+    },
+    {
+      "name": "polarization_valid_frame_ratio",
+      "level": "quality",
+      "unit": "ratio",
+      "definition": "Frames with valid group polarization divided by expected frames.",
+      "source": "Notebook 15 quality accounting",
+      "missingness_rule": "Required unless its denominator is mathematically unavailable.",
+      "scientific_caution": "Quality/coverage describes tracker-derived evidence, not biological certainty."
+    }
+  ]
+}

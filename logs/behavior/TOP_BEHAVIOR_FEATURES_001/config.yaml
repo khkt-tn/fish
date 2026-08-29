@@ -1,0 +1,10 @@
+experiment_id: TOP_BEHAVIOR_FEATURES_001
+trajectory_experiment_id: TOP_TRAJECTORY_CLEANING_001
+window_sec: 5.0
+step_sec: 1.0
+min_window_coverage: 0.6
+primary_group_rows: observed_only
+arena_geometry: null
+wall_metrics_available: false
+physical_calibration_available: false
+experimental_context: UNKNOWN

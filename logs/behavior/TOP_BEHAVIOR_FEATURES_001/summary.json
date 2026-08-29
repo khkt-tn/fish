@@ -1,0 +1,555 @@
+{
+  "experiment_id": "TOP_BEHAVIOR_FEATURES_001",
+  "datetime_utc": "2026-08-29T08:11:07.804915+00:00",
+  "git_commit": "4c582fc012f8e37bf7dd003e034aa7ee1676bed3",
+  "input_cleaned_trajectory_path": "outputs/top/trajectory/top_cleaned_trajectories.csv",
+  "input_cleaned_trajectory_sha256": "9b10268eee589decbbe2a2010ced8f721311ed99c0704051aaf3bfa740fb1225",
+  "window_sec": 5.0,
+  "step_sec": 1.0,
+  "coverage_threshold": 0.6,
+  "feature_groups": [
+    "movement",
+    "turning",
+    "frame_relative_spatial",
+    "nearest_neighbor",
+    "instantaneous_group_geometry",
+    "group_polarization"
+  ],
+  "output_paths": {
+    "individual": "outputs/top/behavior/top_individual_window_features.csv",
+    "group": "outputs/top/behavior/top_group_window_features.csv",
+    "schema": "results/behavior/top_behavior_feature_schema.json"
+  },
+  "output_sha256": {
+    "individual": "2a6a3396a41de3c5ac78b4a1391aa2c11858a8cfde53633a18bbb1a10cb4faa7",
+    "group": "ba5a2687d6c3b998f03a2b060c6084925de83537f186f0e4a7b54fec2d04c893",
+    "schema": "6cfd30a2b69b4d22436b40ffe95e7f79d25c7acc53ea47f454581f6c6b71e5a7"
+  },
+  "row_counts": {
+    "individual_windows": 382,
+    "group_windows": 167,
+    "group_frames": 3150
+  },
+  "per_video_summary": [
+    {
+      "video_id": "TOP_VIDEO_1",
+      "source_video": "1.mp4",
+      "raw_tracking_rows": 2424,
+      "unique_raw_track_ids": 33,
+      "trajectory_segments": 49,
+      "cleaned_rows": 2455,
+      "observed_rows": 2417,
+      "interpolated_rows": 38,
+      "segments_ge_5s": 8,
+      "individual_windows": 82,
+      "median_individual_coverage": 1.0,
+      "median_mean_speed_diag_s": 0.018273381813350913,
+      "median_path_efficiency": 0.5100070236140763,
+      "median_mean_abs_turn_rad": 0.6871782582032244,
+      "median_mean_nnd_diag": 0.16324561491801898,
+      "group_windows": 53,
+      "median_active_tracks": 2.0,
+      "median_group_nnd_diag": 0.19157739893259512,
+      "median_group_pairwise_distance_diag": 0.20271616113925228,
+      "median_group_rms_radius_diag": 0.09618718879052626,
+      "median_group_polarization": 0.6266762741492309,
+      "warnings": "Identity fragmentation; active tracks are not fish count; frame geometry is not tank geometry."
+    },
+    {
+      "video_id": "TOP_VIDEO_2",
+      "source_video": "2.mp4",
+      "raw_tracking_rows": 6330,
+      "unique_raw_track_ids": 53,
+      "trajectory_segments": 78,
+      "cleaned_rows": 6364,
+      "observed_rows": 6329,
+      "interpolated_rows": 35,
+      "segments_ge_5s": 26,
+      "individual_windows": 300,
+      "median_individual_coverage": 1.0,
+      "median_mean_speed_diag_s": 0.025104090976060683,
+      "median_path_efficiency": 0.48320315554058224,
+      "median_mean_abs_turn_rad": 0.5026752454054572,
+      "median_mean_nnd_diag": 0.17955205004400587,
+      "group_windows": 114,
+      "median_active_tracks": 3.0,
+      "median_group_nnd_diag": 0.16609789000005934,
+      "median_group_pairwise_distance_diag": 0.27761576620073514,
+      "median_group_rms_radius_diag": 0.16584573324962953,
+      "median_group_polarization": 0.5040821970670022,
+      "warnings": "Identity fragmentation; active tracks are not fish count; frame geometry is not tank geometry."
+    }
+  ],
+  "nan_summary": [
+    {
+      "table": "individual_window",
+      "feature": "track_id",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "window_start_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "window_end_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "window_mid_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "fps_source",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "n_points",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "coverage_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "observed_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "interpolated_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "window_time_span_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_detection_confidence",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "path_length_px",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "path_length_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "net_displacement_px",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "net_displacement_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "path_efficiency",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_speed_px_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "median_speed_px_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "max_speed_px_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "p95_speed_px_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "speed_std_px_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_speed_diag_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "median_speed_diag_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "max_speed_diag_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_abs_accel_px_s2",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "p95_abs_accel_px_s2",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_abs_accel_diag_s2",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_abs_turn_rad",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "median_abs_turn_rad",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "p95_abs_turn_rad",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "cumulative_abs_turn_rad",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "turn_rate_rad_s",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "heading_resultant_length",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "distance_last_1s_px",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "distance_last_1s_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "x_mean_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "x_std_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "x_range_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "y_mean_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "y_std_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "y_range_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_distance_to_frame_center_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "median_distance_to_frame_center_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_distance_to_nearest_frame_edge_min_dim",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "median_distance_to_nearest_frame_edge_min_dim",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "frame_edge_band_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "frame_center_box_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "mean_nnd_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "median_nnd_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "min_nnd_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "individual_window",
+      "feature": "neighbor_observation_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_frame",
+      "feature": "frame_index",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_frame",
+      "feature": "time_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_frame",
+      "feature": "n_active_tracks",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_frame",
+      "feature": "group_centroid_x_norm",
+      "nan_rate": 0.0025396825396825397
+    },
+    {
+      "table": "group_frame",
+      "feature": "group_centroid_y_norm",
+      "nan_rate": 0.0025396825396825397
+    },
+    {
+      "table": "group_frame",
+      "feature": "mean_nnd_diag",
+      "nan_rate": 0.10761904761904761
+    },
+    {
+      "table": "group_frame",
+      "feature": "median_nnd_diag",
+      "nan_rate": 0.10761904761904761
+    },
+    {
+      "table": "group_frame",
+      "feature": "mean_pairwise_distance_diag",
+      "nan_rate": 0.10761904761904761
+    },
+    {
+      "table": "group_frame",
+      "feature": "median_pairwise_distance_diag",
+      "nan_rate": 0.10761904761904761
+    },
+    {
+      "table": "group_frame",
+      "feature": "min_pairwise_distance_diag",
+      "nan_rate": 0.10761904761904761
+    },
+    {
+      "table": "group_frame",
+      "feature": "max_pairwise_distance_diag",
+      "nan_rate": 0.10761904761904761
+    },
+    {
+      "table": "group_frame",
+      "feature": "group_rms_radius_diag",
+      "nan_rate": 0.0025396825396825397
+    },
+    {
+      "table": "group_frame",
+      "feature": "group_bbox_area_ratio",
+      "nan_rate": 0.0025396825396825397
+    },
+    {
+      "table": "group_frame",
+      "feature": "group_convex_hull_area_ratio",
+      "nan_rate": 0.43746031746031744
+    },
+    {
+      "table": "group_frame",
+      "feature": "group_polarization",
+      "nan_rate": 0.1546031746031746
+    },
+    {
+      "table": "group_frame",
+      "feature": "n_valid_headings",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "window_start_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "window_end_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "window_mid_sec",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "expected_frames",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "frames_with_any_track",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "group_frame_coverage",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "frames_with_2plus_tracks",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "social_metric_frame_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_active_tracks",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "median_active_tracks",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "min_active_tracks",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "max_active_tracks",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_group_centroid_x_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_group_centroid_y_norm",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_nnd_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "median_nnd_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_pairwise_distance_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "median_pairwise_distance_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_group_rms_radius_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "median_group_rms_radius_diag",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_group_bbox_area_ratio",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_group_convex_hull_area_ratio",
+      "nan_rate": 0.0718562874251497
+    },
+    {
+      "table": "group_window",
+      "feature": "mean_group_polarization",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "median_group_polarization",
+      "nan_rate": 0.0
+    },
+    {
+      "table": "group_window",
+      "feature": "polarization_valid_frame_ratio",
+      "nan_rate": 0.0
+    }
+  ],
+  "warnings": [
+    "Notebook 14 has substantial identity fragmentation; track IDs and trajectory UIDs are not biological identity.",
+    "Primary group metrics use observed tracker rows only; n_active_tracks is not a verified fish count.",
+    "Official TOP identity ground truth is unavailable; no HOTA or IDF1 is reported.",
+    "Arena geometry and physical scale are unavailable; spatial features are frame-relative.",
+    "T1/T2 cannot be inferred; experimental_context remains UNKNOWN.",
+    "Acceleration can amplify residual tracker noise; outliers are flagged descriptively and not automatically deleted."
+  ],
+  "decision": "PASS_WITH_WARNING",
+  "next_step": "STOP for user review; Notebook 16 sensor synchronization requires explicit approval."
+}

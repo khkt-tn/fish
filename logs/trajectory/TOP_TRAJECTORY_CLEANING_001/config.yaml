@@ -1,0 +1,19 @@
+experiment_id: TOP_TRAJECTORY_CLEANING_001
+n14_tracking_experiment_id: TOP_TRACK_BYTETRACK_B15_001
+raw_inputs:
+- video_id: TOP_VIDEO_1
+  source_video: 1.mp4
+  video_path: data/raw/top/1.mp4
+  raw_path: outputs/top/tracking/1_tracking_raw.csv
+  expected_raw_sha256: 9fa203913d994ca0b25658c6d4d88ddd1d0d46e0b3e19a9ce7a06732e144373f
+- video_id: TOP_VIDEO_2
+  source_video: 2.mp4
+  video_path: data/raw/top/2.mp4
+  raw_path: outputs/top/tracking/2_tracking_raw.csv
+  expected_raw_sha256: 500323ccb3d928c2f8953e90321877d93c1562cef8b1c627dc845f2048c764f6
+tracker_config: configs/trackers/top_bytetrack_b15.yaml
+tracker_config_sha256: 5711cfadd793ce8463c2249ee490f5cb3639402cb290bb21357d9ef675ec7ace
+max_interp_gap_frames: 3
+smooth_window_frames: 5
+min_segment_points: 5
+cross_id_stitching: false

@@ -1,0 +1,78 @@
+{
+  "experiment_id": "TOP_TRAJECTORY_CLEANING_001",
+  "datetime_utc": "2026-08-29T08:11:07.804915+00:00",
+  "git_commit": "4c582fc012f8e37bf7dd003e034aa7ee1676bed3",
+  "n14_experiment_id": "TOP_TRACK_BYTETRACK_B15_001",
+  "input_raw_tracking_paths": [
+    "outputs/top/tracking/1_tracking_raw.csv",
+    "outputs/top/tracking/2_tracking_raw.csv"
+  ],
+  "input_raw_tracking_sha256": {
+    "1.mp4": "9fa203913d994ca0b25658c6d4d88ddd1d0d46e0b3e19a9ce7a06732e144373f",
+    "2.mp4": "500323ccb3d928c2f8953e90321877d93c1562cef8b1c627dc845f2048c764f6"
+  },
+  "tracker_config": "configs/trackers/top_bytetrack_b15.yaml",
+  "tracker_config_sha256": "5711cfadd793ce8463c2249ee490f5cb3639402cb290bb21357d9ef675ec7ace",
+  "cleaning_config": {
+    "max_interp_gap_frames": 3,
+    "smooth_window_frames": 5,
+    "min_segment_points": 5,
+    "cross_id_stitching": false
+  },
+  "output_path": "outputs/top/trajectory/top_cleaned_trajectories.csv",
+  "output_format": "csv_fallback",
+  "output_sha256": "9b10268eee589decbbe2a2010ced8f721311ed99c0704051aaf3bfa740fb1225",
+  "per_video_qc": [
+    {
+      "video_id": "TOP_VIDEO_1",
+      "source_video": "1.mp4",
+      "raw_tracking_rows": 2424,
+      "raw_observed_rows": 2417,
+      "empty_frame_placeholder_rows": 7,
+      "unique_raw_track_ids": 33,
+      "duplicate_observation_keys": 0,
+      "gap_events": 38,
+      "interpolated_gap_count": 22,
+      "interpolated_rows": 38,
+      "segments_created": 49,
+      "segments_discarded_from_individual_analysis": 9,
+      "cleaned_rows": 2455,
+      "median_segment_duration_sec": 0.8268459100387258,
+      "p95_segment_duration_sec": 12.23731946857313,
+      "max_segment_duration_sec": 14.831548511319632,
+      "segments_ge_5s": 8,
+      "decision": "PASS_WITH_WARNING",
+      "warning": "Tracker identity fragmentation remains; trajectory_uid is not biological identity."
+    },
+    {
+      "video_id": "TOP_VIDEO_2",
+      "source_video": "2.mp4",
+      "raw_tracking_rows": 6330,
+      "raw_observed_rows": 6329,
+      "empty_frame_placeholder_rows": 1,
+      "unique_raw_track_ids": 53,
+      "duplicate_observation_keys": 0,
+      "gap_events": 52,
+      "interpolated_gap_count": 27,
+      "interpolated_rows": 35,
+      "segments_created": 78,
+      "segments_discarded_from_individual_analysis": 18,
+      "cleaned_rows": 6364,
+      "median_segment_duration_sec": 0.9608558764155575,
+      "p95_segment_duration_sec": 17.033354172821266,
+      "max_segment_duration_sec": 36.6289906827507,
+      "segments_ge_5s": 26,
+      "decision": "PASS_WITH_WARNING",
+      "warning": "Tracker identity fragmentation remains; trajectory_uid is not biological identity."
+    }
+  ],
+  "warnings": [
+    "Notebook 14 has substantial identity fragmentation; track IDs and trajectory UIDs are not biological identity.",
+    "Primary group metrics use observed tracker rows only; n_active_tracks is not a verified fish count.",
+    "Official TOP identity ground truth is unavailable; no HOTA or IDF1 is reported.",
+    "Arena geometry and physical scale are unavailable; spatial features are frame-relative.",
+    "T1/T2 cannot be inferred; experimental_context remains UNKNOWN.",
+    "Acceleration can amplify residual tracker noise; outliers are flagged descriptively and not automatically deleted."
+  ],
+  "decision": "PASS_WITH_WARNING"
+}
