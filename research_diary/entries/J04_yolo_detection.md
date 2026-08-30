@@ -65,13 +65,13 @@ YOLOv8n Front đạt checkpoint detection validation với cảnh báo. Detector
 ### V01 — Video predicted camera TOP
 
 <div class="video-container">
-<iframe src="https://www.youtube.com/embed/WElMwtuTUAg" title="V01 — Video predicted camera TOP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/wriHexFK_fw" title="V01 — Video predicted camera TOP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ### V02 — Video predicted camera FRONT
 
 <div class="video-container">
-<iframe src="https://www.youtube.com/embed/qduDQEOlfUU" title="V02 — Video predicted camera FRONT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/gfG78XQ_ugY" title="V02 — Video predicted camera FRONT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 ## 12. Đóng góp của thành viên
