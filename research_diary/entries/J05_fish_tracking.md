@@ -57,13 +57,10 @@ ByteTrack đã tạo trajectory phục vụ bước đặc trưng, nhưng `track
 
 > 🎥 **V06 — ByteTrack theo dõi nhiều cá có ID**
 
-## 11. Video minh họa
-
-### V01 — Video tracking strategies camera front
-
 <div class="video-container">
 <iframe src="https://www.youtube.com/embed/rPQRHIZd1WI" title="Video tracking strategies camera front" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
+
 ## 10. Đóng góp của thành viên
 
 Quang Anh - Quốc Minh
