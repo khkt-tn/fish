@@ -60,24 +60,36 @@ YOLOv8n Front đạt checkpoint detection validation với cảnh báo. Detector
 - [`front_yolov8n_reproducibility_check.csv`](../../results/detection/front_yolov8n_reproducibility_check.csv)
 - Commit `4cfac689c08d0f3f25bdee9cb8aac99d3202b9ee`
 
-## 11. Hình ảnh đề xuất
+## 11. Video minh họa
 
-<!-- TODO_MEDIA:
-source: outputs/front/detection/evaluation/FRONT_DET_YOLOV8N_EVAL_001
-timestamp: N/A
-description: IMG-J04-01 curves; IMG-J04-02 validation; IMG-J04-03 prediction dễ; IMG-J04-04 prediction khó. Source local bị ignore, chỉ chọn ảnh nhỏ sau khi kiểm tra.
--->
+### V01 — Video predicted camera TOP
 
-## 12. Video minh họa
+<div class="video-container">
+  <iframe
+    src="https://youtu.be/WElMwtuTUAg"
+    title="V01 — Video predicted camera TOP"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
-> 🎥 **V05 — Detector chạy trên video FRONT hoặc TOP**
->
-> YouTube: `TODO_YOUTUBE_VIDEO_ID`
+### V02 — Video predicted camera FRONT
 
-## 13. Đóng góp của thành viên
+<div class="video-container">
+  <iframe
+    src="https://youtu.be/qduDQEOlfUU"
+    title="V02 — Video predicted camera FRONT"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
 
-`TO_VERIFY_WITH_STUDENTS`: chưa có evidence phân chia training, audit và phân tích metric.
+## 12. Đóng góp của thành viên
 
-## 14. Công việc tiếp theo
+Quang Anh - Quốc Minh
+
+## 13. Công việc tiếp theo
 
 Giữ nguyên detector và threshold theo experiment khi so sánh tracker; không chọn tracker chỉ dựa trên overlay.
