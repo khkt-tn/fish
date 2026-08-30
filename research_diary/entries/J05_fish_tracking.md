@@ -41,19 +41,11 @@ Trên video Front một cá, cả B15/B30/B60 có quality diagnostic gần như 
 
 B15 có visible track coverage 0,999143, 2 frame visible không có track, 1 excess fragment và processing khoảng 52,41 FPS trong ablation. Tuy nhiên đây là video một cá. TOP tracking về sau có 33 và 53 unique IDs, nhiều track ngắn và gap, cho thấy identity fragmentation rõ trong bài toán nhiều cá.
 
-## 7. Vấn đề phát sinh
-
-Benchmark một cá không đánh giá đầy đủ crossing hoặc inter-fish occlusion. MOT ground truth hiện có 200 frame/768 object rows; HOTA chưa được tính, và ba segment bị skip official metrics do identity uncertain.
-
-## 8. Điều chỉnh và cải tiến
-
-Nhóm tách true absence/visibility khỏi detector miss trong diagnostic Front, giữ identity uncertain thay vì đoán, và dùng `trajectory_uid` chỉ như segment kỹ thuật. Các tracker dùng cùng detector để tránh so sánh sai biến.
-
-## 9. Kết luận tại thời điểm thực hiện
+## 7. Kết luận tại thời điểm thực hiện
 
 ByteTrack đã tạo trajectory phục vụ bước đặc trưng, nhưng `track_id` không phải danh tính sinh học. B15 là lựa chọn kỹ thuật tạm thời chứ không phải bằng chứng ByteTrack tối ưu cho mọi video nhiều cá.
 
-## 10. Minh chứng
+## 8. Minh chứng
 
 - [`front_bytetrack_ablation.csv`](../../results/tracking/front_bytetrack_ablation.csv)
 - [`front_tracker_benchmark.csv`](../../results/tracking/front_tracker_benchmark.csv)
@@ -61,24 +53,18 @@ ByteTrack đã tạo trajectory phục vụ bước đặc trưng, nhưng `track
 - [`top_bytetrack_baseline_summary.csv`](../../results/tracking/top_bytetrack_baseline_summary.csv)
 - Commits `78ed4c1`, `b0407b7`, `4c582fc`
 
-## 11. Hình ảnh đề xuất
-
-<!-- TODO_MEDIA:
-source: local tracking overlays
-timestamp: TO_VERIFY
-description: IMG-J05-01 track ID; IMG-J05-02 crossing; IMG-J05-03 trajectory; IMG-J05-04 identity uncertainty/fragmentation
--->
-
-## 12. Video minh họa
+## 9. Video minh họa
 
 > 🎥 **V06 — ByteTrack theo dõi nhiều cá có ID**
->
-> YouTube: `TODO_YOUTUBE_VIDEO_ID`
 
-## 13. Đóng góp của thành viên
+## 11. Video minh họa
 
-`TO_VERIFY_WITH_STUDENTS`: cần xác nhận người thiết kế ablation, review overlay và làm ground truth.
+### V01 — Video tracking strategies camera front
 
-## 14. Công việc tiếp theo
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/rPQRHIZd1WI" title="Video tracking strategies camera front" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+## 10. Đóng góp của thành viên
 
-Trong audit tái lập, xác nhận GT complete, xử lý các segment identity uncertain theo protocol và không tự điền HOTA.
+Quang Anh - Quốc Minh
+
