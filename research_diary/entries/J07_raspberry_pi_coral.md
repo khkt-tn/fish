@@ -3,7 +3,7 @@ journal_id: J07
 experiment_id: EXP-06
 title: "Chuẩn bị pipeline trên Raspberry Pi và Coral Edge TPU"
 date: "2026-08-19"
-status: PARTIAL
+status: VERIFIED
 authors:
   - "Phạm Duy Quang Anh"
   - "Nguyễn Quốc Minh"
