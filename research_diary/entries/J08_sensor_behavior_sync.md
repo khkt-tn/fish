@@ -1,5 +1,5 @@
 ---
-journal_id: J09
+journal_id: J08
 experiment_id: EXP-07
 title: "Đồng bộ đặc trưng hành vi với dữ liệu môi trường"
 date: "2026-08-29"
@@ -67,7 +67,7 @@ Nhóm gộp bước sensor sync và environment analysis vào Notebook 16, ghi r
 <!-- TODO_MEDIA:
 source: data/raw/sensors/1.json and integrated CSV
 timestamp: N/A
-description: IMG-J09-01 sensor raw; IMG-J09-02 bảng merge; IMG-J09-03 time axis chỉ tạo khi có dữ liệu time-resolved thật
+description: IMG-J08-01 sensor raw; IMG-J08-02 bảng merge; IMG-J08-03 time axis chỉ tạo khi có dữ liệu time-resolved thật
 -->
 
 ## 12. Video minh họa

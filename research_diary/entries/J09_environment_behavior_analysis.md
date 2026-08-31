@@ -1,5 +1,5 @@
 ---
-journal_id: J10
+journal_id: J09
 experiment_id: EXP-08
 title: "Phân tích mối liên hệ giữa môi trường và hành vi"
 date: "2026-08-29"

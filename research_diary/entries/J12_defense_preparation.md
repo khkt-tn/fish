@@ -1,5 +1,5 @@
 ---
-journal_id: J15
+journal_id: J12
 experiment_id: EXP-13
 title: "Chuẩn bị phản biện"
 date: "2026-10-13"
@@ -86,4 +86,4 @@ Có thể quay thử phần trình bày để tự review; không bắt buộc u
 
 ## 14. Công việc tiếp theo
 
-Chốt các trường TO_VERIFY và chuyển sang checklist lưu trữ cuối J16.
+Chốt các trường TO_VERIFY và chuyển sang checklist lưu trữ cuối J13.

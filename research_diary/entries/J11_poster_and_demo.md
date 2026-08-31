@@ -1,5 +1,5 @@
 ---
-journal_id: J14
+journal_id: J11
 experiment_id: EXP-12
 title: "Xây dựng poster và video demo"
 date: "TO_VERIFY"
@@ -84,4 +84,4 @@ description: Poster overview, setup photo, detection/tracking sample, behavior p
 
 ## 14. Công việc tiếp theo
 
-Sau khi poster/demo được review, dùng chúng để luyện phản biện J15; không tự upload hoặc publish trong phiên này.
+Sau khi poster/demo được review, dùng chúng để luyện phản biện J12; không tự upload hoặc publish trong phiên này.

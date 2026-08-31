@@ -1,5 +1,5 @@
 ---
-journal_id: J13
+journal_id: J10
 experiment_id: EXP-11
 title: "Hoàn thiện báo cáo khoa học"
 date: "2026-09-18"
@@ -27,7 +27,7 @@ Báo cáo phải tách detection, tracking, behavior, environment và deployment
 
 ## 3. Thiết bị, dữ liệu và phần mềm
 
-Nguồn viết gồm nhật ký J01–J12, notebook, `results/`, `logs/`, figure đã commit và tài liệu tham khảo được kiểm tra. Không đưa raw video hoặc model binary vào báo cáo Git.
+Nguồn viết gồm nhật ký J01–J09, notebook, `results/`, `logs/`, figure đã commit và tài liệu tham khảo được kiểm tra. Không đưa raw video hoặc model binary vào báo cáo Git.
 
 ## 4. Phương pháp thực hiện
 
@@ -50,7 +50,7 @@ Khoảng dự kiến 18/09–01/10/2026. Mỗi bảng/figure được gắn expe
 
 ## 7. Vấn đề phát sinh
 
-Các phần J01, J07, J08 còn `PARTIAL`; contribution chưa xác minh; deployment benchmark và một số metric MOT còn thiếu. Báo cáo không được che các khoảng trống này.
+Các phần J01, J07 còn `PARTIAL`; contribution chưa xác minh; deployment benchmark và một số metric MOT còn thiếu. Báo cáo không được che các khoảng trống này.
 
 ## 8. Điều chỉnh và cải tiến
 

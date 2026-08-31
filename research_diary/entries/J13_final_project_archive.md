@@ -1,5 +1,5 @@
 ---
-journal_id: J16
+journal_id: J13
 experiment_id: EXP-14
 title: "Khóa dự án và lưu trữ bằng chứng"
 date: "2026-10-20"

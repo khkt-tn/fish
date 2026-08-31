@@ -12,10 +12,9 @@ Không file video nào được đưa vào commit. Đường dẫn local dưới
 | V06 | Video | ByteTrack tracking | J05 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; chọn overlay local sau khi kiểm tra |
 | V07 | Video | Behavior overlay | J06 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; nguồn local cần xác nhận |
 | V08 | Video | Pi + Coral live inference | J07 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; chưa có evidence runtime trong repository |
-| V09 | Video | So sánh FPS trước/sau tối ưu | J08 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; chưa có cặp benchmark |
-| V10 | Video | Hành vi + môi trường đồng bộ | J09 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; cần dựng từ session mapping đã xác nhận |
-| V11 | Video | Pipeline đầy đủ tới phân tích môi trường | J10 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; đề xuất 2–4 phút |
-| V12 | Video | Demo cuối dự án | J14 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; PLANNED |
+| V10 | Video | Hành vi + môi trường đồng bộ | J08 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; cần dựng từ session mapping đã xác nhận |
+| V11 | Video | Pipeline đầy đủ tới phân tích môi trường | J09 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; đề xuất 2–4 phút |
+| V12 | Video | Demo cuối dự án | J11 | TODO_UPLOAD | `TODO_YOUTUBE_URL`; PLANNED |
 
 ## Template YouTube
 
