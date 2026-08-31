@@ -61,24 +61,14 @@ Phần chuẩn bị triển khai được xác minh, nhưng chạy trên Raspber
 - Commit `622a94b808af2173b584cb6c5148603f93bac19c`
 - `pi_front/models/best_full_integer_quant_edgetpu.tflite` (local, ignored, không stage)
 
-## 11. Hình ảnh đề xuất
+## 11. Video minh họa
 
-<!-- TODO_MEDIA:
-source: user-provided Raspberry Pi setup/live screen
-timestamp: N/A
-description: IMG-J07-01 Raspberry Pi + Coral; IMG-J07-02 terminal; IMG-J07-03 giao diện live
--->
+> 🎥 **V01 — Pipeline AI chạy trực tiếp trên Raspberry Pi + Coral**
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/SnY585wfMWQ" title="V02 — Video predicted camera FRONT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
-## 12. Video minh họa
+## 12. Đóng góp của thành viên
 
-> 🎥 **V08 — Pipeline AI chạy trực tiếp trên Raspberry Pi + Coral**
->
-> YouTube: `TODO_YOUTUBE_VIDEO_ID`
+Quang Anh - Quốc Minh
 
-## 13. Đóng góp của thành viên
-
-`TO_VERIFY_WITH_STUDENTS`: chưa xác minh người export model, chuẩn bị phần cứng hoặc thử camera.
-
-## 14. Công việc tiếp theo
-
-Chạy acceptance test trên Pi với video cố định, lưu log nhỏ và benchmark; việc chạy thực nghiệm mới cần user phê duyệt riêng theo workflow.
