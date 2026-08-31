@@ -25,7 +25,7 @@ Thư mục này là nhật ký nghiên cứu dạng Markdown để đọc trực
 | VERIFIED | 7 |
 | PARTIAL | 3 |
 | PLANNED | 6 |
-| Tổng | 16 |
+| Tổng | 13 |
 
 Các bài `PARTIAL` chủ yếu liên quan đến hệ thống thu dữ liệu ban đầu và triển khai Raspberry Pi/Coral: repository có mô tả hoặc code nhưng thiếu log phần cứng, benchmark hay bằng chứng lịch sử được yêu cầu.
 
@@ -40,11 +40,8 @@ Các bài `PARTIAL` chủ yếu liên quan đến hệ thống thu dữ liệu b
 | [J05](entries/J05_fish_tracking.md) | Theo dõi từng cá thể bằng ByteTrack | VERIFIED | EXP-05 |
 | [J06](entries/J06_behavior_features.md) | Xây dựng đặc trưng hành vi cá | VERIFIED | EXP-05 |
 | [J07](entries/J07_raspberry_pi_coral.md) | Chuẩn bị pipeline Raspberry Pi và Coral Edge TPU | PARTIAL | EXP-06 |
-| [J08](entries/J08_realtime_optimization.md) | Tối ưu tốc độ xử lý thời gian thực | PARTIAL | EXP-06 |
 | [J09](entries/J09_sensor_behavior_sync.md) | Đồng bộ đặc trưng hành vi với dữ liệu môi trường | VERIFIED | EXP-07 |
 | [J10](entries/J10_environment_behavior_analysis.md) | Phân tích mối liên hệ giữa môi trường và hành vi | VERIFIED | EXP-08 |
-| [J11](entries/J11_reproducibility_audit.md) | Kiểm tra khả năng tái lập kết quả | PLANNED | EXP-09 |
-| [J12](entries/J12_statistical_validation.md) | Kiểm chứng thống kê và độ tin cậy | PLANNED | EXP-10 |
 | [J13](entries/J13_scientific_report.md) | Hoàn thiện báo cáo khoa học | PLANNED | EXP-11 |
 | [J14](entries/J14_poster_and_demo.md) | Xây dựng poster và video demo | PLANNED | EXP-12 |
 | [J15](entries/J15_defense_preparation.md) | Chuẩn bị phản biện | PLANNED | EXP-13 |
@@ -59,6 +56,3 @@ Các bài `PARTIAL` chủ yếu liên quan đến hệ thống thu dữ liệu b
 - [Nhật ký đóng góp](CONTRIBUTION_LOG.md)
 - [Báo cáo phiên xây dựng nhật ký](CODEX_SESSION_REPORT.md)
 
-## Cách cập nhật
-
-Khi bổ sung evidence, người dùng chỉ cần sửa file `.md`, thêm ảnh nhỏ phù hợp, thay `TODO_YOUTUBE_URL`/`YOUTUBE_VIDEO_ID`, rồi commit. Không đưa raw video, model nặng, token hay credential vào Git.
