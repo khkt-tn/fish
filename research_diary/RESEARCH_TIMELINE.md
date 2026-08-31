@@ -16,13 +16,7 @@ Timeline này ưu tiên hoạt động khoa học và chỉ dùng ngày đã có
 | 29/08/2026 | Hoàn thiện detection/tracking TOP | VERIFIED | Commit `4c582fc` |
 | 29/08/2026 | Hoàn thiện đặc trưng hành vi TOP | VERIFIED | Commit `cc74ce9` |
 | 29/08/2026 | Ghép metadata môi trường cấp phiên và phân tích mô tả hành vi | VERIFIED | Commit `dbc51a9` |
-| 30/08–10/09/2026 | Audit khả năng tái lập | PLANNED | [J11](entries/J11_reproducibility_audit.md) |
-| 11/09–17/09/2026 | Kiểm chứng thống kê và độ tin cậy | PLANNED | [J12](entries/J12_statistical_validation.md) |
 | 18/09–01/10/2026 | Hoàn thiện báo cáo khoa học | PLANNED | [J13](entries/J13_scientific_report.md) |
 | TO_VERIFY | Xây dựng poster và video demo | PLANNED | [J14](entries/J14_poster_and_demo.md) |
 | 13/10–16/10/2026 | Chuẩn bị phản biện | PLANNED | [J15](entries/J15_defense_preparation.md) |
 | 20/10/2026 | Khóa và lưu trữ dự án | PLANNED | [J16](entries/J16_final_project_archive.md) |
-
-## Ghi chú về ngày
-
-Git history hiện tại bắt đầu ngày 17/08/2026. Vì vậy, ngày 12/08 và 14/08 ở trên đến từ metadata dữ liệu nguồn; các mốc tháng 7/đầu tháng 8 khác cần học sinh cung cấp ảnh, log hoặc lịch sử từ thiết bị gốc.
