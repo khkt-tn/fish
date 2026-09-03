@@ -102,12 +102,12 @@
     "results/environment/plots/top_group_polarization_comparison.png"
   ],
   "plot_sha256": {
-    "top_environment_session_conditions.png": "da393ebc95662796cddc925891a690383d9ff2db00e33dc83eaeb9b3506015cc",
-    "top_individual_speed_comparison.png": "6a8dcf5ad939fcf69643caeece9bc5c351a974b41768afdf89c74f5ad5cb9e12",
-    "top_individual_turning_path_efficiency.png": "004d14e9e8ff2b69aad59152709fcf3c03af10898aa62752cd0b80c75e02a1e6",
-    "top_group_nearest_neighbor_comparison.png": "942e71d87d8c61e8007852b1bda779bddc2ce59b2856d24533ba2e07639f6a60",
-    "top_group_dispersion_comparison.png": "ec9ce86614baaad9e9ecb90a69586405b32e03bd177ea5fa72354508b750206f",
-    "top_group_polarization_comparison.png": "4520b96fb58c3d3654b4bde0ef5cf96922897ea82bdf728d589bf43bfd29980a"
+    "top_environment_session_conditions.png": "7ac022bfdb90f28d0a1611bd34b7b19e4a53a2a5ab9176026a32b2dc4d6c0282",
+    "top_individual_speed_comparison.png": "09e1dd6d55506ad58847123cc7a7f23298011c414bf12d88f072c7999034f47e",
+    "top_individual_turning_path_efficiency.png": "269615ab6b1e48c7b372bdd9c20ace365c203d1feeede7c6a32674c61425a209",
+    "top_group_nearest_neighbor_comparison.png": "18f010bc967ffec9826fb3f3e42e2011f11ac7b07508f9e1615244ed945140dd",
+    "top_group_dispersion_comparison.png": "d790c9e9ce0e6142f6b83eeefc13503c89a921f54486437cd02a4708df3dc767",
+    "top_group_polarization_comparison.png": "a313a31a4f35ba2fba0963c80fb94efad94c851a12147b18f2c75c277a65ec55"
   },
   "runtime_sec": 1.7691181850095745,
   "warnings": [
